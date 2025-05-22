@@ -19,7 +19,8 @@ import utils
 
 
 ### Models to test
-SPANISH_MODELS = ["dccuchile/bert-base-spanish-wwm-cased",
+SPANISH_MODELS = [ 
+        "dccuchile/bert-base-spanish-wwm-cased",
           "dccuchile/albert-tiny-spanish",
           "dccuchile/albert-base-spanish",
           "dccuchile/albert-large-spanish",
@@ -30,7 +31,8 @@ SPANISH_MODELS = ["dccuchile/bert-base-spanish-wwm-cased",
           "dccuchile/bert-base-spanish-wwm-uncased", 
           "dccuchile/distilbert-base-spanish-uncased"]
 
-ENGLISH_MODELS = ["bert-base-uncased",
+ENGLISH_MODELS = [
+          "bert-base-uncased",
           "bert-base-cased",
           "albert/albert-base-v1",
           "albert/albert-base-v2",
@@ -41,8 +43,8 @@ ENGLISH_MODELS = ["bert-base-uncased",
           "FacebookAI/roberta-large",
           "distilbert/distilbert-base-uncased"]
 
-MULTILINGUAL_MODELS = [# "FacebookAI/xlm-roberta-base",
-          # "google-bert/bert-base-multilingual-cased",
+MULTILINGUAL_MODELS = ["FacebookAI/xlm-roberta-base",
+          "google-bert/bert-base-multilingual-cased",
           "FacebookAI/xlm-roberta-large",
           "distilbert/distilbert-base-multilingual-cased"
           ]
@@ -60,15 +62,23 @@ lang_to_models_and_stimuli = {
 }
 
 
-def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=20):
-    """Run model on df using batching (safe for short sentences)."""
-
+def run_model(df, mpath, savepath, lang, multilingual):
+    """Run model on df."""
+    ### Running on GPU
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using device:", device)
-    print("Loading model:", mpath)
 
-    model = AutoModel.from_pretrained(mpath, output_hidden_states=True).to(device)
+
+    print(mpath)
+ 
+    model = AutoModel.from_pretrained(
+        mpath,
+        output_hidden_states = True
+    )
+    model.to(device) # allocate model to desired device
+
     tokenizer = AutoTokenizer.from_pretrained(mpath)
+
 
     n_layers = model.config.num_hidden_layers
     print("number of layers:", n_layers)
@@ -79,79 +89,76 @@ def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=20):
 
     results = []
 
-    # Split into batches
-    for start in tqdm(range(0, len(df), max_batch_size)):
 
-        if start % (10 * max_batch_size) == 0 and start > 0:
-            print(f"Processed {start} / {len(df)} examples")
-            
-        batch_df = df.iloc[start:start + max_batch_size]
-        sentences = batch_df["sentence"].tolist()
+    for (ix, row) in tqdm(df.iterrows(), total=df.shape[0]):
 
-        # Tokenize and move to GPU
-        inputs = tokenizer(sentences, return_tensors="pt", padding=True, truncation=True).to(device)
+        sentence = row['sentence']
 
-        with torch.no_grad():
-            outputs = model(**inputs, output_hidden_states=True)
+        ### Run model for each sentence
+        model_outputs = utils.run_model(model, tokenizer, sentence, device)
+        hidden_states = model_outputs['hidden_states']
 
-        hidden_states_all = outputs.hidden_states  # list of [batch, seq, dim]
+        ### Now, for each layer...
+        for layer in range(len(hidden_states)):
 
-        for i_in_batch, row in enumerate(batch_df.itertuples()):
-            attention_mask = inputs["attention_mask"][i_in_batch]
-            valid_tokens = attention_mask.bool()
+            ### Get intrinsic dimensionality
+            e_matrix = hidden_states[layer][0]
+            ### Need to get unique embeddings first
+            e_matrix = hidden_states[layer][0].detach().cpu().numpy()
+            embs_unique = np.unique(e_matrix, axis=0)
 
-            for layer, h in enumerate(hidden_states_all):
-                token_reps = h[i_in_batch][valid_tokens]  # keep on GPU
+            ### Final #tokens should be at least 3 or more
+            if embs_unique.shape[0] < 3:
+                ### 
+                continue
+            ### MLE estimator
+            ### MLE and TwoNN
+            # id_mle = utils.estimate_id(embs_unique, method="mle")
+            # id_twonn = utils.estimate_id(embs_unique, method="twonn")
 
-                if token_reps.size(0) < 3:
-                    continue
+            ### Mean pairwise cosine distance
+            cosine_dists = pdist(embs_unique, metric="cosine")
+            mean_cosine_dist = cosine_dists.mean()
 
-                # (Optional) unique embeddings on GPU
-                # token_reps, _ = torch.unique(token_reps, dim=0, return_inverse=False)
+            ### Centered Isotropy (Ethayarajh)
+            centered = embs_unique - embs_unique.mean(axis=0, keepdims=True)
+            centered_normed = centered / np.linalg.norm(centered, axis=1, keepdims=True)
+            cosine_sim_matrix = cosine_similarity(centered_normed)
+            n = cosine_sim_matrix.shape[0]
+            off_diag = cosine_sim_matrix[~np.eye(n, dtype=bool)]
+            centered_isotropy = 1 - off_diag.mean()
 
-                if token_reps.size(0) < 3:
-                    continue
+            ## Ethayarajh intra-sentence-similarity
+            mean_embedding = embs_unique.mean(axis=0, keepdims=True)
+            centered_normed = embs_unique / np.linalg.norm(embs_unique, axis=1, keepdims=True)
+            mean_normed = mean_embedding / np.linalg.norm(mean_embedding, axis=1, keepdims=True)
+            intra_sentence_similarity = cosine_similarity(centered_normed, mean_normed).mean()
 
-                # --- Drop to CPU only for ID estimation ---
-                token_reps_cpu = token_reps.detach().cpu().numpy()
-                id_mle = utils.estimate_id(token_reps_cpu, method="mle")
-                id_twonn = utils.estimate_id(token_reps_cpu, method="twonn")
+            ### Add to results dictionary
+            results.append({
+                'sentence': row['sentence'],
+                'word': row['word'],
+                'string': row['string'],
+                'Layer': layer,
+                # 'id_mle': id_mle,
+                # 'id_twonn': id_twonn,
+                'num_tokens_original': len(e_matrix),
+                'num_tokens_unique': len(embs_unique),
+                'prop_original_tokens': len(e_matrix) / len(embs_unique),
+                'mean_dist': mean_cosine_dist,
+                'centered_isotropy': centered_isotropy,
+                'intra_sentence_similarity': intra_sentence_similarity
 
-                # --- Mean pairwise cosine distance (GPU) ---
-                normed = torch.nn.functional.normalize(token_reps, dim=1)
-                cos_dists = 1 - normed @ normed.T
-                mean_cosine_dist = cos_dists[~torch.eye(cos_dists.size(0), dtype=bool, device=device)].mean().item()
-
-                # --- Centered isotropy (GPU) ---
-                centered = token_reps - token_reps.mean(dim=0, keepdim=True)
-                centered_normed = torch.nn.functional.normalize(centered, dim=1)
-                cos_sim_matrix = centered_normed @ centered_normed.T
-                off_diag = cos_sim_matrix[~torch.eye(cos_sim_matrix.size(0), dtype=bool, device=device)]
-                centered_isotropy = (1 - off_diag.mean()).item()
-
-                results.append({
-                    'sentence': row.sentence,
-                    'word': row.word,
-                    'string': row.string,
-                    'Layer': layer,
-                    'id_mle': id_mle,
-                    'id_twonn': id_twonn,
-                    'num_tokens_original': token_reps.size(0),
-                    'num_tokens_unique': token_reps.size(0),  # unchanged unless deduping
-                    'prop_original_tokens': 1.0,  # also 1.0 unless deduping
-                    'mean_dist': mean_cosine_dist,
-                    'centered_isotropy': centered_isotropy
-                })
+            })
 
     df_results = pd.DataFrame(results)
-    df_results['n_params'] = n_params
+    df_results['n_params'] = np.repeat(n_params,df_results.shape[0])
     df_results['mpath'] = mpath
-    df_results['language'] = lang
+    df_results['language'] = lang 
     df_results['multilingual'] = multilingual
+    
 
-    if savepath:
-        df_results.to_csv(savepath, index=False)
-
+    df_results.to_csv(savepath, index=False)
 
 ### Handle logic for a dataset/model
 def main(lang):

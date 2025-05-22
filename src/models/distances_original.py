@@ -100,7 +100,8 @@ def run_model(df, mpath, savepath, lang, multilingual = "Yes"):
                 model_cosine = cosine(s1, s2)
 
 
-            if row['same'] == True:
+            if row['same'] == True or row['same'] == "Same Sense":
+                print("here")
                 same_sense = "Same Sense"
             else:
                 same_sense = "Different Sense"
