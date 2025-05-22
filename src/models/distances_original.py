@@ -101,7 +101,6 @@ def run_model(df, mpath, savepath, lang, multilingual = "Yes"):
 
 
             if row['same'] == True or row['same'] == "Same Sense":
-                print("here")
                 same_sense = "Same Sense"
             else:
                 same_sense = "Different Sense"
