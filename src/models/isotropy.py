@@ -104,6 +104,7 @@ def run_model(df, mpath, savepath, lang, multilingual):
             ### Get intrinsic dimensionality
             e_matrix = hidden_states[layer][0]
             ### Need to get unique embeddings first
+            e_matrix = hidden_states[layer][0].detach().cpu().numpy()
             embs_unique = np.unique(e_matrix, axis=0)
 
             ### Final #tokens should be at least 3 or more
