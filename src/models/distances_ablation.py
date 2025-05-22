@@ -13,8 +13,8 @@ from scipy.spatial.distance import cosine
 
 
 
-MULTILINGUAL_MODELS = [# "FacebookAI/xlm-roberta-base",
-          "google-bert/bert-base-multilingual-cased"
+MULTILINGUAL_MODELS = ["FacebookAI/xlm-roberta-base",
+          # "google-bert/bert-base-multilingual-cased"
           # "FacebookAI/xlm-roberta-large",
           # "distilbert/distilbert-base-multilingual-cased"
           ]
