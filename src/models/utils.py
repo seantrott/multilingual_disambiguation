@@ -59,7 +59,7 @@ def run_model(model, tokenizer, sentence, device):
     return {
         'hidden_states': hidden_states,
         'attentions': attentions,
-        'tokens': tokens
+        'tokens': inputs
     }
 
 
