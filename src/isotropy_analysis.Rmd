@@ -1,0 +1,425 @@
+---
+title: "Analysis of Multilingual Models Performance"
+author: "Sean Trott and Pam Rivière"
+date: "November 20, 2024"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "png")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lme4)
+library(viridis)
+library(ggridges)
+library(broom)
+library(lmerTest)
+library(ggrepel)
+
+all_colors <- viridis::viridis(10, option = "magma")
+my_colors <- all_colors[c(1, 4, 7, 9)]  # Selecting specific colors from the palette
+```
+
+# Original models
+
+## Load data
+
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/multilingual_disambiguation/src")
+directory_path <- "../data/processed/isotropy/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_original_models <- bind_rows(csv_list) %>%
+  filter(Layer > 0) %>%
+  mutate(
+    # Layer = Layer + 1,
+    model_name = sub(".*/", "", mpath)
+  ) %>%
+  mutate(language = str_to_title(language))
+
+table(df_original_models$language)
+table(df_original_models$multilingual)
+table(df_original_models$model_name)
+
+
+```
+
+## Visualize isotropy metrics
+
+
+
+```{r}
+
+### 
+df_layerwise_isotropy = df_original_models %>%
+  group_by(model_name, n_params, Layer, language, multilingual) %>%
+  summarise(mean_dist = mean(mean_dist),
+            mean_centered_isotropy = mean(centered_isotropy),
+            mean_intra_sentence_similarity = mean(intra_sentence_similarity)) 
+
+# Summarize multilingual vs. not
+summary_df <- df_layerwise_isotropy %>%
+  group_by(multilingual, Layer, language) %>%
+  summarise(mean_dist = mean(mean_dist),
+            mean_centered_isotropy = mean(mean_centered_isotropy),
+            mean_intra_sentence_similarity = mean(mean_intra_sentence_similarity))
+
+
+
+df_layerwise_isotropy %>%
+  ggplot(aes(x = Layer, y = mean_dist, color = model_name)) +
+  geom_line(alpha = 0.6, linetype = "dotted") +
+  scale_color_manual(values = viridisLite::viridis(10, option = "mako", 
+                                                   begin = 0.8, end = 0.15)) + 
+  geom_line(data = summary_df,
+            aes(x = Layer, 
+                y = mean_dist, 
+                group = multilingual, 
+                color = multilingual),
+            inherit.aes = FALSE,
+            size = 2) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal() +
+  labs(x = "Layer", y = "Mean Cosine Distance", color = "Multilingual") +
+  theme(text = element_text(size = 15),
+        legend.title = element_blank()) +
+  facet_wrap(~language)
+
+
+df_layerwise_isotropy %>%
+  ggplot(aes(x = Layer, y = mean_centered_isotropy, color = model_name)) +
+  geom_line(alpha = 0.6, linetype = "dotted") +
+  scale_color_manual(values = viridisLite::viridis(10, option = "mako", 
+                                                   begin = 0.8, end = 0.15)) + 
+  geom_line(data = summary_df,
+            aes(x = Layer, 
+                y = mean_centered_isotropy, 
+                group = multilingual, 
+                color = multilingual),
+            inherit.aes = FALSE,
+            size = 2) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal() +
+  labs(x = "Layer", y = "Mean Centered Isotropy", color = "Multilingual") +
+  theme(text = element_text(size = 15),
+        legend.title = element_blank()) +
+  facet_wrap(~language)
+
+
+df_layerwise_isotropy %>%
+  ggplot(aes(x = Layer, y = mean_intra_sentence_similarity, color = model_name)) +
+  geom_line(alpha = 0.6, linetype = "dotted") +
+  scale_color_manual(values = viridisLite::viridis(10, option = "mako", 
+                                                   begin = 0.8, end = 0.15)) + 
+  geom_line(data = summary_df,
+            aes(x = Layer, 
+                y = mean_intra_sentence_similarity, 
+                group = multilingual, 
+                color = multilingual),
+            inherit.aes = FALSE,
+            size = 2) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal() +
+  labs(x = "Layer", y = "Mean Intra-Sentence Similarity", color = "Multilingual") +
+  theme(text = element_text(size = 15),
+        legend.title = element_blank()) +
+  facet_wrap(~language)
+
+### Max by size
+df_models_isotropy_by_params = df_original_models %>%
+  group_by(model_name, multilingual, language, n_params, Layer) %>%
+  summarise(mean_dist = mean(mean_dist),
+            mean_centered_isotropy = mean(centered_isotropy),
+            mean_intra_sentence_similarity = mean(intra_sentence_similarity)) %>%
+  group_by(model_name, n_params, multilingual, language) %>%
+  summarise(max_dist = max(mean_dist),
+            max_centered_isotropy = max(mean_centered_isotropy),
+            min_iss = min(mean_intra_sentence_similarity)) %>%
+  mutate(log_params = log10(n_params))
+
+df_models_isotropy_by_params %>%
+  ggplot(aes(x = n_params,
+             y = max_dist,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Max Mean Cosine Distance",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+df_models_isotropy_by_params %>%
+  ggplot(aes(x = n_params,
+             y = max_centered_isotropy,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Max Centered Isotropy",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+
+df_models_isotropy_by_params %>%
+  ggplot(aes(x = n_params,
+             y = min_iss,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Min Intra-Sentence Similarity",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+
+### Mean by size
+df_models_isotropy_by_params = df_original_models %>%
+  group_by(model_name, multilingual, language, n_params) %>%
+  summarise(mean_dist = mean(mean_dist),
+            mean_centered_isotropy = mean(centered_isotropy),
+            mean_iss = mean(intra_sentence_similarity)) %>%
+  mutate(log_params = log10(n_params))
+
+df_models_isotropy_by_params %>%
+  ggplot(aes(x = n_params,
+             y = mean_dist,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Mean Cosine Distance",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+df_models_isotropy_by_params %>%
+  ggplot(aes(x = n_params,
+             y = mean_centered_isotropy,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Mean Centered Isotropy",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+df_models_isotropy_by_params %>%
+  ggplot(aes(x = n_params,
+             y = mean_iss,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Mean Intra-Sentence Similarity",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+##### Layer depth ratio
+df_layerwise_isotropy = df_layerwise_isotropy %>%
+  group_by(model_name) %>%
+  mutate(max_layer = max(Layer),
+         prop_layer = Layer / max_layer)
+
+
+df_layerwise_isotropy %>%
+  mutate(binned_prop_layer = ntile(prop_layer, 10)) %>%
+  mutate(prop_binned = binned_prop_layer / 10) %>%
+  ggplot(aes(x = prop_binned,
+             y = mean_centered_isotropy)) +
+  stat_summary(
+    aes(group = multilingual,
+        color = multilingual),  
+    fun = mean,    
+    geom = "line",        
+    size = 2              
+  ) +
+  stat_summary(
+    aes(group = multilingual, 
+        fill = multilingual), 
+    fun.data = mean_se,    
+    geom = "ribbon",  
+    alpha = 0.2,   
+    color = NA     
+  ) +
+  theme_minimal() +
+  labs(x = "Layer Depth Ratio",
+       y = "Mean Centered Isotropy",
+  color = "Multilingual",
+  fill = "Multilingual") +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom")  +
+  facet_wrap(~language)
+
+
+
+df_layerwise_isotropy %>%
+  mutate(binned_prop_layer = ntile(prop_layer, 10)) %>%
+  mutate(prop_binned = binned_prop_layer / 10) %>%
+  ggplot(aes(x = prop_binned,
+             y = mean_dist)) +
+  stat_summary(
+    aes(group = multilingual,
+        color = multilingual),  
+    fun = mean,    
+    geom = "line",        
+    size = 2              
+  ) +
+  stat_summary(
+    aes(group = multilingual, 
+        fill = multilingual), 
+    fun.data = mean_se,    
+    geom = "ribbon",  
+    alpha = 0.2,   
+    color = NA     
+  ) +
+  theme_minimal() +
+  labs(x = "Layer Depth Ratio",
+       y = "Mean Cosine Distance",
+  color = "Multilingual",
+  fill = "Multilingual") +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom")  +
+  facet_wrap(~language)
+
+
+df_layerwise_isotropy %>%
+  mutate(binned_prop_layer = ntile(prop_layer, 10)) %>%
+  mutate(prop_binned = binned_prop_layer / 10) %>%
+  ggplot(aes(x = prop_binned,
+             y = mean_intra_sentence_similarity)) +
+  stat_summary(
+    aes(group = multilingual,
+        color = multilingual),  
+    fun = mean,    
+    geom = "line",        
+    size = 2              
+  ) +
+  stat_summary(
+    aes(group = multilingual, 
+        fill = multilingual), 
+    fun.data = mean_se,    
+    geom = "ribbon",  
+    alpha = 0.2,   
+    color = NA     
+  ) +
+  theme_minimal() +
+  labs(x = "Layer Depth Ratio",
+       y = "Mean Intra-Sentence Similarity",
+  color = "Multilingual",
+  fill = "Multilingual") +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom")  +
+  facet_wrap(~language)
+
+
+### I.D. by layer depth ratio
+df_original_models = df_original_models %>%
+  group_by(model_name) %>%
+  mutate(max_layer = max(Layer),
+         prop_layer = Layer / max_layer) %>%
+  ### Scale for interpreting the coefficients more easily
+  mutate(prop_layer_scaled = scale(prop_layer))
+
+mod_full = lmer(data = df_original_models,
+                mean_dist ~ prop_layer_scaled * multilingual + 
+                  language + 
+                  log10(n_params) +
+                  (1 | word) + (1|model_name),
+                REML = FALSE)
+summary(mod_full)
+
+mod_full = lmer(data = df_original_models,
+                centered_isotropy ~ prop_layer_scaled * multilingual + 
+                  language + 
+                  log10(n_params) +
+                  (1 | word) + (1 |model_name),
+                REML = FALSE)
+summary(mod_full)
+
+mod_full = lmer(data = df_original_models,
+                intra_sentence_similarity ~ prop_layer_scaled * multilingual + 
+                  language + 
+                  log10(n_params) +
+                  (1 | word) + (1 |model_name),
+                REML = FALSE)
+summary(mod_full)
+
+```
+

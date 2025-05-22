@@ -1,0 +1,298 @@
+---
+title: "Analysis of Multilingual Models Performance"
+author: "Sean Trott and Pam Rivière"
+date: "November 20, 2024"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "pdf")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lme4)
+library(viridis)
+library(ggridges)
+library(broom)
+library(lmerTest)
+
+all_colors <- viridis::viridis(10, option = "magma")
+my_colors <- all_colors[c(1, 4, 7, 9)]  # Selecting specific colors from the palette
+```
+
+# Original models
+
+## Load data
+
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/multilingual_disambiguation/src")
+directory_path <- "../data/processed/distances/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_original_models <- bind_rows(csv_list) %>%
+  mutate(
+    Layer = Layer + 1,
+    model_name = sub(".*/", "", mpath)
+  ) %>%
+  mutate(language = str_to_title(language))
+
+table(df_original_models$language)
+table(df_original_models$multilingual)
+table(df_original_models$model_name)
+
+
+```
+
+## Calculate curse of multilinguality
+
+
+```{r}
+df_original_models_r2 = df_original_models %>%
+  group_by(model_name, multilingual, language, n_params, Layer) %>%
+  summarise(r = cor(Distance, mean_relatedness)) %>%
+  mutate(r2 = r ** 2) %>%
+  group_by(model_name, n_params, multilingual, language) %>%
+  summarise(max_r2 = max(r2)) %>%
+  mutate(log_params = log10(n_params))
+
+df_original_models_r2 %>%
+  ggplot(aes(x = n_params,
+             y = max_r2,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  geom_hline(yintercept = .81**2,
+             linetype = "dotted", color = "red",
+             size = 1.2, alpha = .8) + 
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  scale_y_continuous(limits = c(0, 1)) +
+  labs(x = "Parameters",
+       y = "R2",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
+                                                  begin = 0.8, end = 0.15)) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+
+
+### Quantify
+df_original_models_r2 = df_original_models %>%
+  group_by(model_name, multilingual, language, n_params, Layer) %>%
+  summarise(r = cor(Distance, mean_relatedness)) %>%
+  mutate(r2 = r ** 2) %>%
+  group_by(model_name, n_params, multilingual, language) %>%
+  summarise(max_r2 = max(r2)) %>%
+  mutate(log_params = log10(n_params))
+nrow(df_original_models_r2)
+
+m_both = lm(data = df_original_models_r2, 
+               max_r2 ~ log_params + multilingual + language)
+summary(m_both)
+
+```
+
+## Distance by layer, by multilingual status
+
+```{r}
+df_layerwise_distance = df_original_models %>%
+  group_by(model_name, n_params, Layer, Same_sense, language, multilingual) %>%
+  summarise(mean_dist = mean(Distance))
+
+# Summarize multilingual vs. not
+summary_df <- df_layerwise_distance %>%
+  group_by(multilingual, Layer, language, Same_sense) %>%
+  summarise(mean_dist = mean(mean_dist))
+
+
+
+df_layerwise_distance %>%
+  ggplot(aes(x = Layer, y = mean_dist, color = model_name)) +
+  geom_line(alpha = 0.6, linetype = "dotted") +
+  scale_color_manual(values = viridisLite::viridis(10, option = "mako", 
+                                                   begin = 0.8, end = 0.15)) + 
+  geom_line(data = summary_df,
+            aes(x = Layer, 
+                y = mean_dist, 
+                group = multilingual, 
+                color = multilingual),
+            inherit.aes = FALSE,
+            size = 2) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal() +
+  labs(x = "Layer", y = "Mean Cosine Distance", color = "Multilingual") +
+  theme(text = element_text(size = 15),
+        legend.title = element_blank()) +
+  facet_wrap(~language + Same_sense)
+
+
+
+
+
+### Difference view
+df_layerwise_distance_wide = df_layerwise_distance %>%
+  pivot_wider(names_from = "Same_sense",
+              values_from = "mean_dist") %>%
+  mutate(diff = `Different Sense` - `Same Sense`)
+
+summary_df_wide <- df_layerwise_distance_wide %>%
+  group_by(multilingual, Layer, language) %>%
+  summarise(mean_diff = mean(diff))
+
+df_layerwise_distance_wide %>%
+  ggplot(aes(x = Layer, y = diff, color = model_name)) +
+  geom_line(alpha = 0.6, linetype = "dotted") +
+  scale_color_manual(values = viridisLite::viridis(10, option = "mako", 
+                                                   begin = 0.8, end = 0.15)) + 
+  geom_line(data = summary_df_wide,
+            aes(x = Layer, 
+                y = mean_diff, 
+                group = multilingual, 
+                color = multilingual),
+            inherit.aes = FALSE,
+            size = 2) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal() +
+  labs(x = "Layer", y = "Mean Diff. (Diff. - Same Sense)", color = "Multilingual") +
+  theme(text = element_text(size = 15),
+        legend.title = element_blank()) +
+  facet_wrap(~language)
+
+### Analysis
+df_original_models = df_original_models %>%
+  group_by(model_name) %>%
+  mutate(max_layer = max(Layer),
+         prop_layer = Layer / max_layer) %>%
+  ### Scale for interpreting the coefficients more easily
+  mutate(prop_layer_scaled = scale(prop_layer))
+
+mod_full = lmer(data = df_original_models,
+                Distance ~ multilingual * prop_layer_scaled + multilingual * Same_sense +
+                  language + 
+                  log10(n_params) +
+                  (1 | word) + (1 |model_name),
+                REML = FALSE)
+summary(mod_full)
+
+
+```
+
+
+# Ablated models
+
+## Load data
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/multilingual_disambiguation/src")
+
+directory_path <- "../data/processed/distances_ablated/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_ablated_models <- bind_rows(csv_list) %>%
+  mutate(
+    Layer = Layer + 1,
+    model_name = sub(".*/", "", mpath)
+  )
+
+```
+
+
+## Calculate R2
+
+```{r}
+### R2 by ablation by model
+df_r2_by_ablation = df_ablated_models %>%
+  group_by(model_name, Layer_ablated, Head_ablated,
+           multilingual, language, Layer, n_params) %>%
+  summarise(r = cor(Distance, mean_relatedness)) %>%
+  mutate(r2 = r**2) %>%
+  group_by(model_name, multilingual, language, n_params,
+           Layer_ablated, Head_ablated) %>%
+  summarise(max_r2_ablated = max(r2)) %>%
+  mutate(log_params = log10(n_params))
+  
+
+### Join with original dataframe
+df_merged_r2 = df_r2_by_ablation %>%
+  inner_join(df_original_models_r2) %>%
+  mutate(r2_delta = max_r2_ablated - max_r2,
+         r2_prop = max_r2_ablated / max_r2)
+
+
+summary(df_merged_r2$max_r2_ablated)
+summary(df_merged_r2$r2_prop)
+cor(df_merged_r2$r2_delta, df_merged_r2$r2_prop)
+
+df_merged_r2 %>%
+  ggplot(aes(x = r2_prop)) +
+  geom_histogram() +
+  theme_minimal()
+
+
+
+df_merged_r2 %>%
+  ggplot(aes(x = Layer_ablated,
+             y = Head_ablated,
+             fill = r2_prop)) +
+  geom_tile() +
+  labs(x = "Layer",
+       y = "Head",
+       fill = "Prop. Intact R2") +
+  scale_fill_gradient(
+    name = "Prop. Intact R2",
+    low = "white",
+    high = "red"
+  ) +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name, ncol = 2) +
+  facet_wrap(~language)
+
+
+### Compare across languages
+df_ablated_wide = df_merged_r2 %>%
+  ungroup() %>%
+  mutate(head_id = paste(Layer_ablated, "-", Head_ablated)) %>%
+  select(head_id, language, model_name, r2_prop) %>%
+  pivot_wider(names_from = c(language),
+              values_from = r2_prop) 
+
+cor(df_ablated_wide$english, df_ablated_wide$spanish)
+
+### TODO: Do these heads overlap with the underlying attention differences?
+df_ablated_wide %>%
+  ggplot(aes(x = english, y = spanish)) +
+  geom_point(alpha = .5) +
+  theme_minimal() +
+  labs(x = "Prop. Intact R2 (English)",
+       y = "Prop. Intact R2 (Spanish)") +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") 
+  
+```
+
