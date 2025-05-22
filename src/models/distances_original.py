@@ -35,7 +35,7 @@ ENGLISH_MODELS = ["bert-base-uncased",
           "distilbert/distilbert-base-uncased"]
 
 MULTILINGUAL_MODELS = [# "FacebookAI/xlm-roberta-base",
-          # "google-bert/bert-base-multilingual-cased"
+          #"google-bert/bert-base-multilingual-cased"
           "FacebookAI/xlm-roberta-large",
           "distilbert/distilbert-base-multilingual-cased"
           ]
@@ -143,13 +143,13 @@ def main(lang):
     dataset, stim_path, models = lang_to_models_and_stimuli[lang]
     df = pd.read_csv(stim_path)
 
-    
+    """
     for mpath in models:
         just_model_name = mpath.split("/")[1] if "/" in mpath else mpath
 
         savepath = "data/processed/distances/{dataset}_{model}.csv".format(dataset = dataset, model = just_model_name)
         run_model(df, mpath, savepath, lang=lang, multilingual="No")
-    
+    """
 
     for mpath in MULTILINGUAL_MODELS:
         just_model_name = mpath.split("/")[1] if "/" in mpath else mpath
