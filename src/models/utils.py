@@ -4,24 +4,18 @@ import functools
 import torch
 from torch.nn.functional import softmax
 import numpy as np
+from skdim.id import TwoNN, MLE, KNN
 
 
 
-def generate_revisions():
-    ## TODO: Ensure this is correct
-    # Fixed initial steps
-    revisions = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1000]
-    # Add every 1,000 steps afterward
-    revisions.extend(range(2000, 144000, 1000))  # Adjust range as needed
-    # Format each step as "stepX"
-    return [f"step{step}" for step in revisions]
 
-
-def generate_revisions_test():
-    # Fixed initial steps
-    revisions = [143000]
-    # revisions = [143000]
-    return [f"step{step}" for step in revisions]
+def estimate_id(embs, method="twonn"):
+    if method == "twonn":
+        return TwoNN().fit(embs).dimension_
+    elif method == "mle":
+        return MLE().fit(embs).dimension_
+    elif method == "knn":
+        return KNN().fit(embs).dimension_
 
 
 

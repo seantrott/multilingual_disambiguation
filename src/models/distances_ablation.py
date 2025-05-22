@@ -172,4 +172,5 @@ def main(lang):
 if __name__ == "__main__":
 
     ## Run main
-    main("spanish")
+    main("english")
+
