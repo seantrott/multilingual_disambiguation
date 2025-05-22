@@ -60,7 +60,7 @@ lang_to_models_and_stimuli = {
 }
 
 
-def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=256):
+def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=10):
     """Run model on df using batching (safe for short sentences)."""
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
