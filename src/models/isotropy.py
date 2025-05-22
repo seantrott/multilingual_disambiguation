@@ -60,23 +60,15 @@ lang_to_models_and_stimuli = {
 }
 
 
-def run_model(df, mpath, savepath, lang, multilingual):
-    """Run model on df."""
-    ### Running on GPU
+def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=256):
+    """Run model on df using batching (safe for short sentences)."""
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using device:", device)
+    print("Loading model:", mpath)
 
-
-    print(mpath)
- 
-    model = AutoModel.from_pretrained(
-        mpath,
-        output_hidden_states = True
-    )
-    model.to(device) # allocate model to desired device
-
+    model = AutoModel.from_pretrained(mpath, output_hidden_states=True).to(device)
     tokenizer = AutoTokenizer.from_pretrained(mpath)
-
 
     n_layers = model.config.num_hidden_layers
     print("number of layers:", n_layers)
@@ -87,71 +79,68 @@ def run_model(df, mpath, savepath, lang, multilingual):
 
     results = []
 
-    for (ix, row) in tqdm(df.iterrows(), total=df.shape[0]):
+    # Split into batches
+    for start in tqdm(range(0, len(df), max_batch_size)):
+        batch_df = df.iloc[start:start + max_batch_size]
+        sentences = batch_df["sentence"].tolist()
 
-        ### Get word
-        target = " {w}".format(w = row['string'])
-        disambiguating_word = " {w}".format(w = row['disambiguating_word']) # row['string']
-        sentence = row['sentence']
+        # Tokenize all at once
+        inputs = tokenizer(sentences, return_tensors="pt", padding=True, truncation=True).to(device)
 
-        ### Run model for each sentence
-        model_outputs = utils.run_model(model, tokenizer, sentence, device)
-        hidden_states = model_outputs['hidden_states']
+        with torch.no_grad():
+            outputs = model(**inputs, output_hidden_states=True)
 
-        ### Now, for each layer...
-        for layer in range(len(hidden_states)):
+        hidden_states_all = outputs.hidden_states  # list of [batch, seq, dim]
 
-            ### Get intrinsic dimensionality
-            e_matrix = hidden_states[layer][0]
-            ### Need to get unique embeddings first
-            e_matrix = hidden_states[layer][0].detach().cpu().numpy()
-            embs_unique = np.unique(e_matrix, axis=0)
+        for i_in_batch, row in enumerate(batch_df.itertuples()):
+            attention_mask = inputs["attention_mask"][i_in_batch]
+            valid_tokens = attention_mask.bool()
 
-            ### Final #tokens should be at least 3 or more
-            if embs_unique.shape[0] < 3:
-                ### 
-                continue
-            ### MLE estimator
-            ### MLE and TwoNN
-            id_mle = utils.estimate_id(embs_unique, method="mle")
-            id_twonn = utils.estimate_id(embs_unique, method="twonn")
+            for layer, h in enumerate(hidden_states_all):
+                token_reps = h[i_in_batch][valid_tokens].detach().cpu().numpy()
 
-            ### Mean pairwise cosine distance
-            cosine_dists = pdist(embs_unique, metric="cosine")
-            mean_cosine_dist = cosine_dists.mean()
+                if token_reps.shape[0] < 3:
+                    continue
 
-            ### Centered Isotropy (Ethayarajh)
-            centered = embs_unique - embs_unique.mean(axis=0, keepdims=True)
-            centered_normed = centered / np.linalg.norm(centered, axis=1, keepdims=True)
-            cosine_sim_matrix = cosine_similarity(centered_normed)
-            n = cosine_sim_matrix.shape[0]
-            off_diag = cosine_sim_matrix[~np.eye(n, dtype=bool)]
-            centered_isotropy = 1 - off_diag.mean()
+                embs_unique = np.unique(token_reps, axis=0)
+                if embs_unique.shape[0] < 3:
+                    continue
 
-            ### Add to results dictionary
-            results.append({
-                'sentence': row['sentence'],
-                'word': row['word'],
-                'string': row['string'],
-                'Layer': layer,
-                'id_mle': id_mle,
-                'id_twonn': id_twonn,
-                'num_tokens_original': len(e_matrix),
-                'num_tokens_unique': len(embs_unique),
-                'prop_original_tokens': len(e_matrix) / len(embs_unique),
-                'mean_dist': mean_cosine_dist,
-                'centered_isotropy': centered_isotropy
+                id_mle = utils.estimate_id(embs_unique, method="mle")
+                id_twonn = utils.estimate_id(embs_unique, method="twonn")
+                cosine_dists = pdist(embs_unique, metric="cosine")
+                mean_cosine_dist = cosine_dists.mean()
 
-            })
+                centered = embs_unique - embs_unique.mean(axis=0, keepdims=True)
+                centered_normed = centered / np.linalg.norm(centered, axis=1, keepdims=True)
+                cosine_sim_matrix = cosine_similarity(centered_normed)
+                n = cosine_sim_matrix.shape[0]
+                off_diag = cosine_sim_matrix[~np.eye(n, dtype=bool)]
+                centered_isotropy = 1 - off_diag.mean()
+
+                results.append({
+                    'sentence': row.sentence,
+                    'word': row.word,
+                    'string': row.string,
+                    'Layer': layer,
+                    'id_mle': id_mle,
+                    'id_twonn': id_twonn,
+                    'num_tokens_original': token_reps.shape[0],
+                    'num_tokens_unique': embs_unique.shape[0],
+                    'prop_original_tokens': token_reps.shape[0] / embs_unique.shape[0],
+                    'mean_dist': mean_cosine_dist,
+                    'centered_isotropy': centered_isotropy
+                })
 
     df_results = pd.DataFrame(results)
-    df_results['n_params'] = np.repeat(n_params,df_results.shape[0])
+    df_results['n_params'] = n_params
     df_results['mpath'] = mpath
-    df_results['language'] = lang 
+    df_results['language'] = lang
     df_results['multilingual'] = multilingual
-    
 
-    df_results.to_csv(savepath, index=False)
+    if savepath:
+        df_results.to_csv(savepath, index=False)
+
 
 ### Handle logic for a dataset/model
 def main(lang):
