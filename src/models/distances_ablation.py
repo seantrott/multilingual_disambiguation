@@ -35,7 +35,9 @@ lang_to_stimuli = {
 
 def run_model(df, mpath, dataset, lang, multilingual = "Yes"):
 
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    ### Running on GPU
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print("Using device:", device)
 
     model = AutoModel.from_pretrained(
         mpath,
@@ -97,15 +99,7 @@ def run_model(df, mpath, dataset, lang, multilingual = "Yes"):
                     s2 = utils.get_embedding(s2_outputs['hidden_states'], s2_outputs['tokens'], tokenizer, target, layer, device)
 
                     ### Now calculate cosine distance 
-                    #.  note, tensors need to be copied to cpu to make this run;
-                    #.  still faster to do this copy than to just have everything
-                    #.  running on the cpu
-                    if device.type == "mps":  
-                        model_cosine = cosine(s1.cpu(), s2.cpu())
-
-                    else: 
-                        model_cosine = cosine(s1, s2)
-
+                    model_cosine = cosine(s1.detach().cpu(), s2.detach().cpu())
 
                     if row['same'] == True:
                         same_sense = "Same Sense"

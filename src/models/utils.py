@@ -39,21 +39,39 @@ def find_sublist_index(mylist, sublist):
 
 
 def run_model(model, tokenizer, sentence, device):
-    """Run model, return hidden states and attention"""
-    # Tokenize sentence
-    inputs = tokenizer(sentence, return_tensors="pt").to(device)
+    """Run model on a sentence and return hidden states, attentions, and tokens."""
+
+    # Tokenize and move to the correct device
+    inputs = tokenizer(sentence, return_tensors="pt")
+    inputs = {k: v.to(device) for k, v in inputs.items()}
 
     # Run model
     with torch.no_grad():
         output = model(**inputs, output_attentions=True)
-        hidden_states = output.hidden_states
-        attentions = output.attentions
 
-    return {'hidden_states': hidden_states,
-            'attentions': attentions,
-            'tokens': inputs}
+    hidden_states = output.hidden_states
+    attentions = output.attentions
 
+    # Get token strings (move input_ids back to CPU first if needed)
+    token_ids = inputs["input_ids"].detach().cpu()[0]
+    tokens = tokenizer.convert_ids_to_tokens(token_ids)
 
+    return {
+        'hidden_states': hidden_states,
+        'attentions': attentions,
+        'tokens': tokens
+    }
+
+def run_model(model, tokenizer, sentence, device):
+    inputs = tokenizer(sentence, return_tensors="pt")
+    inputs = {k: v.to(device) for k, v in inputs.items()}  # <- this line is essential
+    with torch.no_grad():
+        outputs = model(**inputs)
+    return {
+        "hidden_states": outputs.hidden_states,
+        "tokens": tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
+    }
+    
 ### ... grab the embeddings for your target tokens
 def get_embedding(hidden_states, inputs, tokenizer, target, layer, device):
     """Extract embedding for TARGET from set of hidden states and token ids."""
