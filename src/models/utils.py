@@ -62,16 +62,8 @@ def run_model(model, tokenizer, sentence, device):
         'tokens': tokens
     }
 
-def run_model(model, tokenizer, sentence, device):
-    inputs = tokenizer(sentence, return_tensors="pt")
-    inputs = {k: v.to(device) for k, v in inputs.items()}  # <- this line is essential
-    with torch.no_grad():
-        outputs = model(**inputs)
-    return {
-        "hidden_states": outputs.hidden_states,
-        "tokens": tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
-    }
-    
+
+
 ### ... grab the embeddings for your target tokens
 def get_embedding(hidden_states, inputs, tokenizer, target, layer, device):
     """Extract embedding for TARGET from set of hidden states and token ids."""
