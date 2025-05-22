@@ -1,0 +1,452 @@
+word,sentence,disambiguating_word,gender,string,context_cue
+aceite,Compró el aceite de oliva.,oliva,male,aceite,adjective
+aceite,Compró el aceite de carro.,carro,male,aceite,adjective
+aceite,Compró el aceite de cocina.,cocina,male,aceite,adjective
+aceite,Compró el aceite de motor.,motor,male,aceite,adjective
+ala,Le gustó el ala sureste.,sureste,female,ala,adjective
+ala,Le gustó el ala remodelada.,remodelada,female,ala,adjective
+ala,Le gustó el ala plumosa.,plumosa,female,ala,adjective
+ala,Le gustó el ala de águila.,águila,female,ala,adjective
+algodón,Evaluó el algodón endulzado.,endulzado,male,algodón,adjective
+algodón,Evaluó el algodón sembrado.,sembrado,male,algodón,adjective
+algodón,Evaluó el algodón caramelizado.,caramelizado,male,algodón,adjective
+algodón,Evaluó el algodón cultivado.,cultivado,male,algodón,adjective
+arte,Se trataba del arte de mentir.,mentir,male,arte,adjective
+arte,Se trataba del arte de guerra.,guerra,male,arte,adjective
+arte,Se trataba del arte abstracto.,abstracto,male,arte,adjective
+arte,Se trataba del arte renacentista.,renacentista,male,arte,adjective
+banco,Era un banco cómodo.,cómodo,male,banco,adjective
+banco,Era un banco exitoso.,exitoso,male,banco,adjective
+banco,Era un banco financiero.,financiero,male,banco,adjective
+banco,Era un banco plástico.,plástico,male,banco,adjective
+baño,Disfrutó el baño frío.,frío,male,baño,adjective
+baño,Disfrutó el baño privado.,privado,male,baño,adjective
+baño,Disfrutó el baño remodelado.,remodelado,male,baño,adjective
+baño,Disfrutó el baño caliente.,caliente,male,baño,adjective
+cadena,Era una cadena de radio.,radio,female,cadena,adjective
+cadena,Era una cadena elegante.,elegante,female,cadena,adjective
+cadena,Era una cadena de hierro.,hierro,female,cadena,adjective
+cadena,Era una cadena de oro.,oro,female,cadena,adjective
+cadena,Era una cadena de reo.,reo,female,cadena,adjective
+cadena,Era una cadena televisiva.,televisiva,female,cadena,adjective
+caja,Ella vio la caja registradora.,registradora,female,caja,adjective
+caja,Ella vio la caja acústica.,acústica,female,caja,adjective
+caja,Ella vio la caja bancaria.,bancaria,female,caja,adjective
+caja,Ella vio la caja sellada.,sellada,female,caja,adjective
+caja,Ella vio la caja fuerte.,fuerte,female,caja,adjective
+caja,Ella vio la caja percusiva.,percusiva,female,caja,adjective
+calle,Condujo en la calle marginal.,marginal,female,calle,adjective
+calle,Condujo en la calle principal.,principal,female,calle,adjective
+calle,Condujo en la calle asfaltada.,asfaltada,female,calle,adjective
+calle,Condujo en la calle resbalosa.,resbalosa,female,calle,adjective
+campo,Era un campo competitivo.,competitivo,male,campo,adjective
+campo,Era un campo biológico.,biológico,male,campo,adjective
+campo,Era un campo cultivado.,cultivado,male,campo,adjective
+campo,Era un campo abandonado.,abandonado,male,campo,adjective
+canal,Estaba en el canal uterino.,uterino,male,canal,adjective
+canal,Estaba en el canal televisivo.,televisivo,male,canal,adjective
+canal,Estaba en el canal marítimo.,marítimo,male,canal,adjective
+canal,Estaba en el canal navegable.,navegable,male,canal,adjective
+canal,Estaba en el canal de comedia.,comedia,male,canal,adjective
+canal,Estaba en el canal cervical.,cervical,male,canal,adjective
+capa,Se trataba de la capa de superhéroe.,superhéroe,female,capa,adjective
+capa,Se trataba de la capa de ozono.,ozono,female,capa,adjective
+capa,Se trataba de la capa atmosférica.,atmosférica,female,capa,adjective
+capa,Se trataba de la capa de tela.,tela,female,capa,adjective
+capital,Le gustó el capital financiero.,financiero,male,capital,adjective
+capital,Le gustó la capital antigua.,antigua,female,capital,adjective
+capital,Le gustó el capital económico.,económico,male,capital,adjective
+capital,Le gustó la capital holandesa.,holandesa,female,capital,adjective
+carrera,Fue una carrera académica.,académica,female,carrera,adjective
+carrera,Fue una carrera profesional.,profesional,female,carrera,adjective
+carrera,Fue una carrera reñida.,reñida,female,carrera,adjective
+carrera,Fue una carrera universitaria.,universitaria,female,carrera,adjective
+carrera,Fue una carrera benéfica.,benéfica,female,carrera,adjective
+carrera,Fue una carrera olímpica.,olímpica,female,carrera,adjective
+cartel,Era un cartel peligroso.,peligroso,male,cartel,adjective
+cartel,Era un cartel publicitario.,publicitario,male,cartel,adjective
+cartel,Era un cartel informativo.,informativo,male,cartel,adjective
+cartel,Era un cartel dominante.,dominante,male,cartel,adjective
+casco,Le gustó el casco de la ciclista.,ciclista,male,casco,adjective
+casco,Le gustó el casco protector.,protector,male,casco,adjective
+casco,Le gustó el casco urbano.,urbano,male,casco,adjective
+casco,Le gustó el casco de la ciudad.,ciudad,male,casco,adjective
+caudal,Era un caudal financiero.,financiero,male,caudal,adjective
+caudal,Era un caudal ecológico.,ecológico,male,caudal,adjective
+caudal,Era un caudal ambiental.,ambiental,male,caudal,adjective
+caudal,Era un caudal heredado.,heredado,male,caudal,adjective
+cima,Estaba en la cima de la loma.,loma,female,cima,adjective
+cima,Estaba en la cima de la fama.,fama,female,cima,adjective
+cima,Estaba en la cima de la montaña.,montaña,female,cima,adjective
+cima,Estaba en la cima de su carrera.,carrera,female,cima,adjective
+cinta,Usó la cinta rosada.,rosada,female,cinta,adjective
+cinta,Usó la cinta decorativa.,decorativa,female,cinta,adjective
+cinta,Usó la cinta adhesiva.,adhesiva,female,cinta,adjective
+cinta,Usó la cinta pegante.,pegante,female,cinta,adjective
+cinta,Usó la cinta quirúrgica.,quirúrgica,female,cinta,adjective
+cinta,Usó la cinta métrica.,métrica,female,cinta,adjective
+clase,Se trataba de una clase media.,media,female,clase,adjective
+clase,Se trataba de una clase aburrida.,aburrida,female,clase,adjective
+clase,Se trataba de una clase de geología.,geología,female,clase,adjective
+clase,Se trataba de una clase social.,social,female,clase,adjective
+clave,Era la clave musical.,musical,female,clave,adjective
+clave,Era la clave esencial.,esencial,female,clave,adjective
+clave,Era la clave de sol.,sol,female,clave,adjective
+clave,Era la clave al caso.,caso,female,clave,adjective
+clima,El clima estaba tenso.,tenso,male,clima,adjective
+clima,El clima estaba amigable.,amigable,male,clima,adjective
+clima,El clima estaba frío.,frío,male,clima,adjective
+clima,El clima estaba lluvioso.,lluvioso,male,clima,adjective
+colonia,Era una colonia bacteriana.,bacteriana,female,colonia,adjective
+colonia,Era una colonia de hombre.,hombre,female,colonia,adjective
+colonia,Era una colonia abandonada.,abandonada,female,colonia,adjective
+colonia,Era una colonia fragante.,fragante,female,colonia,adjective
+colonia,Era una colonia rebelde.,rebelde,female,colonia,adjective
+colonia,Era una colonia oprimida.,oprimida,female,colonia,adjective
+colonia,Era una colonia de hormigas.,hormigas,female,colonia,adjective
+colonia,Era una colonia sutil.,sutil,female,colonia,adjective
+columna,Era una columna de mármol.,mármol,female,columna,adjective
+columna,Era una columna decorativa.,decorativa,female,columna,adjective
+columna,Era una columna vertebral.,vertebral,female,columna,adjective
+columna,Era una columna encorvada.,encorvada,female,columna,adjective
+compañía,Le gustó la compañía de actores.,actores,female,compañía,adjective
+compañía,Le gustó la compañía de inversiones.,inversiones,female,compañía,adjective
+compañía,Le gustó la compañía financiera.,financiera,female,compañía,adjective
+compañía,Le gustó la compañía teatral.,teatral,female,compañía,adjective
+compás,Él cantaba al compás.,cantaba,male,compás,verb
+compás,Él navegaba con el compás.,navegaba,male,compás,verb
+compás,Él bailaba al compás.,bailaba,male,compás,verb
+compás,Él observaba el compás.,observaba,male,compás,verb
+copa,Él vio la copa deportiva.,deportiva,female,copa,adjective
+copa,Él vio la copa mundial.,mundial,female,copa,adjective
+copa,Él vio la copa de cristal.,cristal,female,copa,adjective
+copa,Él vio la copa llena.,llena,female,copa,adjective
+copa,Él vio la copa vacía.,vacía,female,copa,adjective
+corazón,Tenía el corazón inflamado.,inflamado,male,corazón,adjective
+corazón,Tenía el corazón partido.,partido,male,corazón,adjective
+corazón,Tenía el corazón operado.,operado,male,corazón,adjective
+corazón,Tenía el corazón angustiado.,angustiado,male,corazón,adjective
+cordón,Se trataba de un cordón inalámbrico.,inalámbrico,male,cordón,adjective
+cordón,Se trataba de un cordón biológico.,biológico,male,cordón,adjective
+cordón,Se trataba de un cordón eléctrico.,eléctrico,male,cordón,adjective
+cordón,Se trataba de un cordón umbilical.,umbilical,male,cordón,adjective
+cordón,Se trataba de un cordón sedoso.,sedoso,male,cordón,adjective
+cordón,Se trataba de un cordón de lona.,lona,male,cordón,adjective
+corte,Le gustó la corte real.,real,female,corte,adjective
+corte,Le gustó el corte asimétrico.,asimétrico,male,corte,adjective
+corte,Le gustó la corte suprema.,suprema,female,corte,adjective
+corte,Le gustó la corte judicial.,judicial,female,corte,adjective
+corte,Le gustó el corte de pelo.,pelo,male,corte,adjective
+corte,Le gustó la corte noble.,noble,female,corte,adjective
+corteza,Estaba en la corteza del roble.,roble,female,corteza,adjective
+corteza,Estaba en la corteza prefrontal.,prefrontal,female,corteza,adjective
+corteza,Estaba en la corteza cerebral.,cerebral,female,corteza,adjective
+corteza,Estaba en la corteza crocante.,crocante,female,corteza,adjective
+corteza,Estaba en la corteza comestible.,comestible,female,corteza,adjective
+corteza,Estaba en la corteza geológica.,geológica,female,corteza,adjective
+corteza,Estaba en la corteza terrestre.,terrestre,female,corteza,adjective
+corteza,Estaba en la corteza del árbol.,árbol,female,corteza,adjective
+cuadro,No le gustó el cuadro de síntomas.,síntomas,male,cuadro,adjective
+cuadro,No le gustó el cuadro antiguo.,antiguo,male,cuadro,adjective
+cuadro,No le gustó el cuadro barroco.,barroco,male,cuadro,adjective
+cuadro,No le gustó el cuadro clíninco.,clíninco,male,cuadro,adjective
+cuadro,No le gustó el cuadro diagnóstico.,diagnóstico,male,cuadro,adjective
+cuadro,No le gustó el cuadro pintoresco.,pintoresco,male,cuadro,adjective
+cubo,Le gustó el cubo geométrico.,geométrico,male,cubo,adjective
+cubo,Le gustó el cubo tridimensional.,tridimensional,male,cubo,adjective
+cubo,Le gustó el cubo plástico.,plástico,male,cubo,adjective
+cubo,Le gustó el cubo de madera.,madera,male,cubo,adjective
+cuerdas,Tenía cuerdas sintéticas.,sintéticas,female,cuerdas,adjective
+cuerdas,Tenía cuerdas fibrosas.,fibrosas,female,cuerdas,adjective
+cuerdas,Tenía cuerdas de terreno.,terreno,female,cuerdas,adjective
+cuerdas,Tenía cuerdas inflamadas.,inflamadas,female,cuerdas,adjective
+cuerdas,Tenía cuerdas vocales.,vocales,female,cuerdas,adjective
+cuerdas,Tenía cuerdas forestadas.,forestadas,female,cuerdas,adjective
+cura,Era una cura efectiva.,efectiva,female,cura,adjective
+cura,Era una cura potente.,potente,female,cura,adjective
+cura,Era un cura compasivo.,compasivo,male,cura,adjective
+cura,Era un cura sabio.,sabio,male,cura,adjective
+cámara,Se trataba de la cámara principal.,principal,female,cámara,adjective
+cámara,Se trataba de la cámara senatorial.,senatorial,female,cámara,adjective
+cámara,Se trataba de la cámara profesional.,profesional,female,cámara,adjective
+cámara,Se trataba de la cámara gubernamental.,gubernamental,female,cámara,adjective
+cámara,Se trataba de la cámara digital.,digital,female,cámara,adjective
+cámara,Se trataba de la cámara remodelada.,remodelada,female,cámara,adjective
+código,Era un código de conducta.,conducta,male,código,adjective
+código,Era un código de ética.,ética,male,código,adjective
+código,Era un código programático.,programático,male,código,adjective
+código,Era un código númerico.,númerico,male,código,adjective
+depresión,Se trataba de una depresión geológica.,geológica,female,depresión,adjective
+depresión,Se trataba de una depresión mental.,mental,female,depresión,adjective
+depresión,Se trataba de una depresión psicológica.,psicológica,female,depresión,adjective
+depresión,Se trataba de una depresión terrestre.,terrestre,female,depresión,adjective
+estado,Le preocupaba su estado psicológico.,psicológico,male,estado,adjective
+estado,Le preocupaba su estado mental.,mental,male,estado,adjective
+estado,Le preocupaba su estado natal.,natal,male,estado,adjective
+estado,Le preocupaba su estado sureño.,sureño,male,estado,adjective
+fibra,Carecía fibra nutritiva.,nutritiva,female,fibra,adjective
+fibra,Carecía fibra óptica.,óptica,female,fibra,adjective
+fibra,Carecía fibra dietética.,dietética,female,fibra,adjective
+fibra,Carecía fibra moral.,moral,female,fibra,adjective
+fibra,Carecía fibra muscular.,muscular,female,fibra,adjective
+firma,Era una firma caligráfica.,caligráfica,female,firma,adjective
+firma,Era una firma emprendedora.,emprendedora,female,firma,adjective
+firma,Era una firma acreditada.,acreditada,female,firma,adjective
+firma,Era una firma indescifrable.,indescifrable,female,firma,adjective
+fondo,Estaba en el fondo marino.,marino,male,fondo,adjective
+fondo,Estaba en el fondo presupuestario.,presupuestario,male,fondo,adjective
+fondo,Estaba en el fondo gubernamental.,gubernamental,male,fondo,adjective
+fondo,Estaba en el fondo del cuarto.,cuarto,male,fondo,adjective
+fortuna,Fue una fortuna imprevista.,imprevista,female,fortuna,adjective
+fortuna,Fue una fortuna financiera.,financiera,female,fortuna,adjective
+fortuna,Fue una fortuna heredada.,heredada,female,fortuna,adjective
+fortuna,Fue una fortuna inesperada.,inesperada,female,fortuna,adjective
+frase,Le gustó la frase poética.,poética,female,frase,adjective
+frase,Le gustó la frase lírica.,lírica,female,frase,adjective
+frase,Le gustó la frase melódica.,melódica,female,frase,adjective
+frase,Le gustó la frase musical.,musical,female,frase,adjective
+frente,Era una frente arrugada.,arrugada,female,frente,adjective
+frente,Era una frente amplia.,amplia,female,frente,adjective
+frente,Era un frente lluvioso.,lluvioso,male,frente,adjective
+frente,Era un frente frío.,frío,male,frente,adjective
+función,Era una función lineal.,lineal,female,función,adjective
+función,Era una función social.,social,female,función,adjective
+función,Era una función matemática.,matemática,female,función,adjective
+función,Era una función biológica.,biológica,female,función,adjective
+gato,Compró el gato peludo.,peludo,male,gato,adjective
+gato,Compró el gato hidraúlico.,hidraúlico,male,gato,adjective
+gato,Compró el gato para el auto.,auto,male,gato,adjective
+gato,Compró el gato para el niño.,niño,male,gato,adjective
+guardia,Llamó a la guardia nacional.,nacional,female,guardia,adjective
+guardia,Llamó al guardia de seguridad.,seguridad,male,guardia,adjective
+guardia,Llamó a la guardia costanera.,costanera,female,guardia,adjective
+guardia,Llamó al guardia de noche.,noche,male,guardia,adjective
+guía,Era una guía televisiva.,televisiva,female,guía,adjective
+guía,Era una guía turística.,turística,female,guía,adjective
+guía,Era una guía viajera.,viajera,female,guía,adjective
+guía,Era una guía digital.,digital,female,guía,adjective
+hoja,Era una hoja de cálculo.,cálculo,female,hoja,adjective
+hoja,Era una hoja verdosa.,verdosa,female,hoja,adjective
+hoja,Era una hoja de papel.,papel,female,hoja,adjective
+hoja,Era una hoja de árbol.,árbol,female,hoja,adjective
+hábito,Era un hábito irritante.,irritante,male,hábito,adjective
+hábito,Era un hábito de lona.,lona,male,hábito,adjective
+hábito,Era un hábito de monje.,monje,male,hábito,adjective
+hábito,Era un hábito rutinario.,rutinario,male,hábito,adjective
+lengua,Le gusta la lengua cocida.,cocida,female,lengua,adjective
+lengua,Le gusta la lengua castellana.,castellana,female,lengua,adjective
+lengua,Le gusta la lengua española.,española,female,lengua,adjective
+lengua,Le gusta la lengua marinada.,marinada,female,lengua,adjective
+llama,Era una llama peruana.,peruana,female,llama,adjective
+llama,Era una llama brillante.,brillante,female,llama,adjective
+llama,Era una llama lanuda.,lanuda,female,llama,adjective
+llama,Era una llama ardiente.,ardiente,female,llama,adjective
+mano,Tenía una mano dura.,dura,female,mano,adjective
+mano,Tenía una mano arrugada.,arrugada,female,mano,adjective
+mano,Tenía una mano sudada.,sudada,female,mano,adjective
+mano,Tenía una mano de hierro.,hierro,female,mano,adjective
+mano,Tenía una mano lastimada.,lastimada,female,mano,adjective
+muñeca,Tenía una muñeca fracturada.,fracturada,female,muñeca,adjective
+muñeca,Tenía una muñeca lesionada.,lesionada,female,muñeca,adjective
+muñeca,Tenía una muñeca preciosa.,preciosa,female,muñeca,adjective
+muñeca,Tenía una muñeca plástica.,plástica,female,muñeca,adjective
+naranja,Era una naranja madura.,madura,female,naranja,adjective
+naranja,Era un naranja oscuro.,oscuro,male,naranja,adjective
+naranja,Era una naranja jugosa.,jugosa,female,naranja,adjective
+naranja,Era un naranja brillante.,brillante,male,naranja,adjective
+nave,Era una nave sagrada.,sagrada,female,nave,adjective
+nave,Era una nave católica.,católica,female,nave,adjective
+nave,Era una nave de madera.,madera,female,nave,adjective
+nave,Era una nave marítima.,marítima,female,nave,adjective
+nota,Era una nota musical.,musical,female,nota,adjective
+nota,Era una nota desafinada.,desafinada,female,nota,adjective
+nota,Era una nota decepcionante.,decepcionante,female,nota,adjective
+nota,Era una nota académica.,académica,female,nota,adjective
+nota,Era una nota aguda.,aguda,female,nota,adjective
+nota,Era una nota satisfactoria.,satisfactoria,female,nota,adjective
+ola,Se trataba de una ola migratoria.,migratoria,female,ola,adjective
+ola,Se trataba de una ola navegable.,navegable,female,ola,adjective
+ola,Se trataba de una ola marítima.,marítima,female,ola,adjective
+ola,Se trataba de una ola criminal.,criminal,female,ola,adjective
+orden,Es una orden católica.,católica,female,orden,adjective
+orden,Es una orden religiosa.,religiosa,female,orden,adjective
+orden,Es una orden ejecutiva.,ejecutiva,female,orden,adjective
+orden,Es una orden jurídica.,jurídica,female,orden,adjective
+palma,Estaba en la palma derecha.,derecha,female,palma,adjective
+palma,Estaba en la palma izquierda.,izquierda,female,palma,adjective
+palma,Estaba en la palma frondosa.,frondosa,female,palma,adjective
+palma,Estaba en la palma de coco.,coco,female,palma,adjective
+papa,Era una papa podrida.,podrida,female,papa,adjective
+papa,Era una papa caliente.,caliente,female,papa,adjective
+papa,Era una papa majada.,majada,female,papa,adjective
+papa,Era un papa conservador.,conservador,male,papa,adjective
+papa,Era un papa comprensivo.,comprensivo,male,papa,adjective
+papa,Era un papa jesuita.,jesuita,male,papa,adjective
+papel,Era un papel secundario.,secundario,male,papel,adjective
+papel,Era un papel cuadriculado.,cuadriculado,male,papel,adjective
+papel,Era un papel principal.,principal,male,papel,adjective
+papel,Era un papel amplio.,amplio,male,papel,adjective
+parque,Visitó el parque de diversiones.,diversiones,male,parque,adjective
+parque,Visitó el parque estatal.,estatal,male,parque,adjective
+parque,Visitó el parque forestal.,forestal,male,parque,adjective
+parque,Visitó el parque de atracciones.,atracciones,male,parque,adjective
+pasta,Le gustó la pasta blanqueadora.,blanqueadora,female,pasta,adjective
+pasta,Le gustó la pasta dental.,dental,female,pasta,adjective
+pasta,Le gustó la pasta caliente.,caliente,female,pasta,adjective
+pasta,Le gustó la pasta italiana.,italiana,female,pasta,adjective
+pastor,Era un pastor eclesiástico.,eclesiástico,male,pastor,adjective
+pastor,Era un pastor evangélico.,evangélico,male,pastor,adjective
+pastor,Era un pastor montuno.,montuno,male,pastor,adjective
+pastor,Era un pastor de ovejas.,ovejas,male,pastor,adjective
+pata,Ella vio la pata peluda.,peluda,female,pata,adjective
+pata,Ella vio la pata de la mesa.,mesa,female,pata,adjective
+pata,Ella vio la pata de hierro.,hierro,female,pata,adjective
+pata,Ella vio la pata de la gata.,gata,female,pata,adjective
+patrón,Era un patrón complicado.,complicado,male,patrón,adjective
+patrón,Era un patrón exigente.,exigente,male,patrón,adjective
+patrón,Era un patrón orgulloso.,orgulloso,male,patrón,adjective
+patrón,Era un patrón geométrico.,geométrico,male,patrón,adjective
+perfil,Se trataba de un perfil fotogénico.,fotogénico,male,perfil,adjective
+perfil,Se trataba de un perfil psicológico.,psicológico,male,perfil,adjective
+perfil,Se trataba de un perfil perturbador.,perturbador,male,perfil,adjective
+perfil,Se trataba de un perfil elegante.,elegante,male,perfil,adjective
+periódico,Se trataba de un periódico local.,local,male,periódico,adjective
+periódico,Se trataba de un periódico estrujado.,estrujado,male,periódico,adjective
+periódico,Se trataba de un periódico plegado.,plegado,male,periódico,adjective
+periódico,Se trataba de un periódico global.,global,male,periódico,adjective
+pico,Dibujó el pico del ave.,ave,male,pico,adjective
+pico,Dibujó el pico montuno.,montuno,male,pico,adjective
+pico,Dibujó el pico alpino.,alpino,male,pico,adjective
+pico,Dibujó el pico amarillo.,amarillo,male,pico,adjective
+pieza,Le gustó la pieza añadida.,añadida,female,pieza,adjective
+pieza,Le gustó la pieza flamenca.,flamenca,femael,pieza,adjective
+pieza,Le gustó la pieza abstracta.,abstracta,female,pieza,adjective
+pieza,Le gustó la pieza alterada.,alterada,female,pieza,adjective
+pieza,Le gustó la pieza musical.,musical,female,pieza,adjective
+pieza,Le gustó la pieza contemporánea.,contemporánea,female,pieza,adjective
+pista,Era una pista falsa.,falsa,female,pista,adjective
+pista,Era una pista resbalosa.,resbalosa,female,pista,adjective
+pista,Era una pista de baile.,baile,female,pista,adjective
+pista,Era una pista clave.,clave,female,pista,adjective
+planta,Estaba en la planta superior.,superior,female,planta,adjective
+planta,Estaba en la planta izquierda.,izquierda,female,planta,adjective
+planta,Estaba en la planta baja.,baja,female,planta,adjective
+planta,Estaba en la planta del pie.,pie,female,planta,adjective
+planta,Estaba en la planta tropical.,tropical,female,planta,adjective
+planta,Estaba en la planta venenosa.,venenosa,female,planta,adjective
+pluma,Tenía una pluma fuente.,fuente,female,pluma,adjective
+pluma,Tenía una pluma albina.,albina,female,pluma,adjective
+pluma,Tenía una pluma estilográfica.,estilográfica,female,pluma,adjective
+pluma,Tenía una pluma silvestre.,silvestre,female,pluma,adjective
+posición,Estaba en una posición fetal.,fetal,female,posición,adjective
+posición,Estaba en una posición ventajosa.,ventajosa,female,posición,adjective
+posición,Estaba en una posición sentada.,sentada,female,posición,adjective
+posición,Estaba en una posición oportuna.,oportuna,female,posición,adjective
+prima,Era una prima costosa.,costosa,female,prima,adjective
+prima,Era una prima anual.,anual,female,prima,adjective
+prima,Era una prima hermana.,hermana,female,prima,adjective
+prima,Era una prima atenta.,atenta,female,prima,adjective
+pupila,Tenía una pupila dilatada.,dilatada,female,pupila,adjective
+pupila,Tenía una pupila estudiosa.,estudiosa,female,pupila,adjective
+pupila,Tenía una pupila aplicada.,aplicada,female,pupila,adjective
+pupila,Tenía una pupila contraída.,contraída,female,pupila,adjective
+químico,Era un químico negligente.,negligente,male,químico,adjective
+químico,Era un químico tóxico.,tóxico,male,químico,adjective
+químico,Era un químico orgánico.,orgánico,male,químico,adjective
+químico,Era un químico exitoso.,exitoso,male,químico,adjective
+rama,Era una rama retorcida.,retorcida,female,rama,adjective
+rama,Era una rama disecada.,disecada,female,rama,adjective
+rama,Era una rama médica.,médica,female,rama,adjective
+rama,Era una rama competitiva.,competitiva,female,rama,adjective
+raya,Dibujó una raya precisa.,precisa,female,raya,adjective
+raya,Dibujó una raya marina.,marina,female,raya,adjective
+raya,Dibujó una raya endémica.,endémica,female,raya,adjective
+raya,Dibujó una raya recta.,recta,female,raya,adjective
+red,Era una red cibernética.,cibernética,female,red,adjective
+red,Era una red pesquera.,pesquera,female,red,adjective
+red,Era una red de cuerda.,cuerda,female,red,adjective
+red,Era una red privada.,privada,female,red,adjective
+redada,Fue una redada en el barrio.,barrio,female,redada,adjective
+redada,Fue una redada policiaca.,policiaca,female,redada,adjective
+redada,Fue una redada en el río.,río,female,redada,adjective
+redada,Fue una redada pesquera.,pesquera,female,redada,adjective
+resistencia,Se trataba de una resistencia de circuito.,circuito,female,resistencia,adjective
+resistencia,Se trataba de una resistencia militar.,militar,female,resistencia,adjective
+resistencia,Se trataba de una resistencia eléctrica.,eléctrica,female,resistencia,adjective
+resistencia,Se trataba de una resistencia política.,política,female,resistencia,adjective
+revista,Era una revista deportiva.,deportiva,female,revista,adjective
+revista,Era una revista de belleza.,belleza,female,revista,adjective
+revista,Era una revista brillosa.,brillosa,female,revista,adjective
+revista,Era una revista estrujada.,estrujada,female,revista,adjective
+rosa,Era un rosa claro.,claro,male,rosa,adjective
+rosa,Era una rosa frágil.,frágil,female,rosa,adjective
+rosa,Era una rosa fragante.,fragante,female,rosa,adjective
+rosa,Era un rosa tenue.,tenue,male,rosa,adjective
+sangre,Él tiene sangre noble.,noble,female,sangre,adjective
+sangre,Él tiene sangre diluida.,diluida,female,sangre,adjective
+sangre,Él tiene sangre real.,real,female,sangre,adjective
+sangre,Él tiene sangre coagulada.,coagulada,female,sangre,adjective
+semilla,Era una semilla germinada.,germinada,female,semilla,adjective
+semilla,Era una semilla educativa.,educativa,female,semilla,adjective
+semilla,Era una semilla sembrada.,sembrada,female,semilla,adjective
+semilla,Era una semilla cultural.,cultural,female,semilla,adjective
+seno,Estaba en el seno familiar.,familiar,male,seno,adjective
+seno,Estaba en el seno operado.,operado,male,seno,adjective
+seno,Estaba en el seno social.,social,male,seno,adjective
+seno,Estaba en el seno izquiero.,izquiero,male,seno,adjective
+serie,Se trataba de una serie matemática.,matemática,female,serie,adjective
+serie,Se trataba de una serie televisiva.,televisiva,female,serie,adjective
+serie,Se trataba de una serie numérica.,numérica,female,serie,adjective
+serie,Se trataba de una serie animada.,animada,female,serie,adjective
+sierra,Era una sierra eléctrica.,eléctrica,female,sierra,adjective
+sierra,Era una sierra nevada.,nevada,female,sierra,adjective
+sierra,Era una sierra automática.,automática,female,sierra,adjective
+sierra,Era una sierra forestada.,forestada,female,sierra,adjective
+sirena,Era una sirena coqueta.,coqueta,female,sirena,adjective
+sirena,Era una sirena mitológica.,mitológica,female,sirena,adjective
+sirena,Era una sirena policíaca.,policíaca,female,sirena,adjective
+sirena,Era una sirena ruidosa.,ruidosa,female,sirena,adjective
+sostén,Era un sostén incómodo.,incómodo,male,sostén,adjective
+sostén,Era un sostén incondicional.,incondicional,male,sostén,adjective
+sostén,Era un sostén sedoso.,sedoso,male,sostén,adjective
+sostén,Era un sostén emocional.,emocional,male,sostén,adjective
+sueño,Él moría de sueño.,moría,male,sueño,verb
+sueño,Él alcanzó su sueño.,alcanzó,male,sueño,verb
+sueño,Él relató su sueño.,relató,male,sueño,verb
+sueño,Él abandonó su sueño.,abandonó,male,sueño,verb
+sueño,Él recordó su sueño.,recordó,male,sueño,verb
+sueño,Él tenía sueño.,tenía,male,sueño,verb
+tabla,Le gustó la tabla astillada.,astillada,female,tabla,adjective
+tabla,Le gustó la tabla de ajedrez.,ajedrez,female,tabla,adjective
+tabla,Le gustó la tabla de madera.,madera,female,tabla,adjective
+tabla,Le gustó la tabla de juego.,juego,female,tabla,adjective
+taco,Le gustó el taco mexicano.,mexicano,male,taco,adjective
+taco,Le gustó el taco puntiagudo.,puntiagudo,male,taco,adjective
+taco,Le gustó el taco delicioso.,delicioso,male,taco,adjective
+taco,Le gustó el taco del zapato.,zapato,male,taco,adjective
+tecla,Tocó la tecla del ordenador.,ordenador,female,tecla,adjective
+tecla,Tocó la tecla espaciadora.,espaciadora,female,tecla,adjective
+tecla,Tocó la tecla desafinada.,desafinada,female,tecla,adjective
+tecla,Tocó la tecla afinada.,afinada,female,tecla,adjective
+título,Le gustó el título propietario.,propietario,male,título,adjective
+título,Le gustó el título del libro.,libro,male,título,adjective
+título,Le gustó el título legal.,legal,male,título,adjective
+título,Le gustó el título halagador.,halagador,male,título,adjective
+título,Le gustó el título del poema.,poema,male,título,adjective
+título,Le gustó el título profesional.,profesional,male,título,adjective
+vaso,Se trataba de un vaso cristalino.,cristalino,male,vaso,adjective
+vaso,Se trataba de un vaso antiguo.,antiguo,male,vaso,adjective
+vaso,Se trataba de un vaso sanguíneo.,sanguíneo,male,vaso,adjective
+vaso,Se trataba de un vaso obstruido.,obstruido,male,vaso,adjective
+vela,Ella vio la vela derretida.,derretida,female,vela,adjective
+vela,Ella vio la vela de lona.,lona,female,vela,adjective
+vela,Ella vio la vela de cera.,cera,female,vela,adjective
+vela,Ella vio la vela del barco.,barco,female,vela,adjective
+volumen,Aumentó el volumen de la corriente.,corriente,male,volumen,adjective
+volumen,Aumentó el volumen del agua.,agua,male,volumen,adjective
+volumen,Aumentó el volumen de la bocina.,bocina,male,volumen,adjective
+volumen,Aumentó el volumen de la voz.,voz,male,volumen,adjective
+órgano,Tenía un órgano ceremonial.,ceremonial,male,órgano,adjective
+órgano,Tenía un órgano eclesiástico.,eclesiástico,male,órgano,adjective
+órgano,Tenía un órgano herido.,herido,male,órgano,adjective
+órgano,Tenía un órgano operado.,operado,male,órgano,adjective
