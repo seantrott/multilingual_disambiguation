@@ -161,13 +161,13 @@ def main(lang):
     df = pd.read_csv(stim_path)
 
     ### For each language-specific model...
-    """
+    
     for mpath in models:
         just_model_name = mpath.split("/")[1] if "/" in mpath else mpath
 
         savepath = "data/processed/isotropy/{dataset}_{model}_isotropy.csv".format(dataset = dataset, model = just_model_name)
         run_model(df, mpath, savepath, lang=lang, multilingual="No")
-    """
+    
 
     ### Also do for multilingual models
     
