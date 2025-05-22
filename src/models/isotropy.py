@@ -60,7 +60,7 @@ lang_to_models_and_stimuli = {
 }
 
 
-def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=10):
+def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=20):
     """Run model on df using batching (safe for short sentences)."""
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -81,10 +81,14 @@ def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=10):
 
     # Split into batches
     for start in tqdm(range(0, len(df), max_batch_size)):
+
+        if start % (10 * max_batch_size) == 0 and start > 0:
+            print(f"Processed {start} / {len(df)} examples")
+            
         batch_df = df.iloc[start:start + max_batch_size]
         sentences = batch_df["sentence"].tolist()
 
-        # Tokenize all at once
+        # Tokenize and move to GPU
         inputs = tokenizer(sentences, return_tensors="pt", padding=True, truncation=True).to(device)
 
         with torch.no_grad():
@@ -97,26 +101,33 @@ def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=10):
             valid_tokens = attention_mask.bool()
 
             for layer, h in enumerate(hidden_states_all):
-                token_reps = h[i_in_batch][valid_tokens].detach().cpu().numpy()
+                token_reps = h[i_in_batch][valid_tokens]  # keep on GPU
 
-                if token_reps.shape[0] < 3:
+                if token_reps.size(0) < 3:
                     continue
 
-                embs_unique = np.unique(token_reps, axis=0)
-                if embs_unique.shape[0] < 3:
+                # (Optional) unique embeddings on GPU
+                # token_reps, _ = torch.unique(token_reps, dim=0, return_inverse=False)
+
+                if token_reps.size(0) < 3:
                     continue
 
-                id_mle = utils.estimate_id(embs_unique, method="mle")
-                id_twonn = utils.estimate_id(embs_unique, method="twonn")
-                cosine_dists = pdist(embs_unique, metric="cosine")
-                mean_cosine_dist = cosine_dists.mean()
+                # --- Drop to CPU only for ID estimation ---
+                token_reps_cpu = token_reps.detach().cpu().numpy()
+                id_mle = utils.estimate_id(token_reps_cpu, method="mle")
+                id_twonn = utils.estimate_id(token_reps_cpu, method="twonn")
 
-                centered = embs_unique - embs_unique.mean(axis=0, keepdims=True)
-                centered_normed = centered / np.linalg.norm(centered, axis=1, keepdims=True)
-                cosine_sim_matrix = cosine_similarity(centered_normed)
-                n = cosine_sim_matrix.shape[0]
-                off_diag = cosine_sim_matrix[~np.eye(n, dtype=bool)]
-                centered_isotropy = 1 - off_diag.mean()
+                # --- Mean pairwise cosine distance (GPU) ---
+                normed = torch.nn.functional.normalize(token_reps, dim=1)
+                cos_dists = 1 - normed @ normed.T
+                mean_cosine_dist = cos_dists[~torch.eye(cos_dists.size(0), dtype=bool, device=device)].mean().item()
+
+                # --- Centered isotropy (GPU) ---
+                centered = token_reps - token_reps.mean(dim=0, keepdim=True)
+                centered_normed = torch.nn.functional.normalize(centered, dim=1)
+                cos_sim_matrix = centered_normed @ centered_normed.T
+                off_diag = cos_sim_matrix[~torch.eye(cos_sim_matrix.size(0), dtype=bool, device=device)]
+                centered_isotropy = (1 - off_diag.mean()).item()
 
                 results.append({
                     'sentence': row.sentence,
@@ -125,9 +136,9 @@ def run_model(df, mpath, savepath, lang, multilingual, max_batch_size=10):
                     'Layer': layer,
                     'id_mle': id_mle,
                     'id_twonn': id_twonn,
-                    'num_tokens_original': token_reps.shape[0],
-                    'num_tokens_unique': embs_unique.shape[0],
-                    'prop_original_tokens': token_reps.shape[0] / embs_unique.shape[0],
+                    'num_tokens_original': token_reps.size(0),
+                    'num_tokens_unique': token_reps.size(0),  # unchanged unless deduping
+                    'prop_original_tokens': 1.0,  # also 1.0 unless deduping
                     'mean_dist': mean_cosine_dist,
                     'centered_isotropy': centered_isotropy
                 })
