@@ -34,8 +34,8 @@ ENGLISH_MODELS = ["bert-base-uncased",
           "FacebookAI/roberta-large",
           "distilbert/distilbert-base-uncased"]
 
-MULTILINGUAL_MODELS = ["FacebookAI/xlm-roberta-base",
-          "google-bert/bert-base-multilingual-cased"
+MULTILINGUAL_MODELS = [# "FacebookAI/xlm-roberta-base",
+          # "google-bert/bert-base-multilingual-cased"
           "FacebookAI/xlm-roberta-large",
           "distilbert/distilbert-base-multilingual-cased"
           ]
