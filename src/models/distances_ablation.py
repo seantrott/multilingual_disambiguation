@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from transformers import AutoModel, AutoTokenizer
 import gc
+import os
 
 import utils
 from tqdm import tqdm
@@ -57,6 +58,15 @@ def run_model(df, mpath, dataset, lang, multilingual = "Yes"):
     for layer_idx in range(1, n_layers):
         print("Layer: " + str(layer_idx))
         for head_idx in range(n_heads):
+
+            print("Checking if we've already run this analysis...")
+            just_model_name = mpath.split("/")[1] if "/" in mpath else mpath
+            savepath = "data/processed/distances_ablated/{dataset}_{model}_distances_L{l}H{h}.csv".format(dataset = dataset, model = just_model_name,
+                                                                                                          l = str(layer_idx), h = str(head_idx))
+            if os.path.exists(savepath):
+               print("Already run this model for this checkpoint.")
+               continue
+
 
             ### Reload model in memory to deal with overwriting
             model = AutoModel.from_pretrained(
