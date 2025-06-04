@@ -180,4 +180,4 @@ def main(lang):
 if __name__ == "__main__":
 
     ## Read stimuli
-    main("english")
+    main("spanish")
