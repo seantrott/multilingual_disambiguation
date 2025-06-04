@@ -11,7 +11,6 @@ import torch
 from scipy.spatial.distance import cosine
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer
-import statsmodels.formula.api as smf
 
 
 import utils
