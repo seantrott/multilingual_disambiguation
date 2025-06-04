@@ -21,6 +21,7 @@ library(viridis)
 library(ggridges)
 library(broom)
 library(lmerTest)
+library(ggrepel)
 
 all_colors <- viridis::viridis(10, option = "magma")
 my_colors <- all_colors[c(1, 4, 7, 9)]  # Selecting specific colors from the palette
@@ -81,8 +82,10 @@ df_original_models_r2 %>%
        color = "Multilingual",
        shape = "Multilingual") +
   theme_bw() +
-  scale_color_manual(values = viridisLite::viridis(2, option = "mako", 
-                                                  begin = 0.8, end = 0.15)) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
   theme(text = element_text(size = 15),
         legend.position="bottom") +
   facet_wrap(~language)
@@ -212,7 +215,8 @@ df_ablated_models <- bind_rows(csv_list) %>%
   mutate(
     Layer = Layer + 1,
     model_name = sub(".*/", "", mpath)
-  )
+  ) %>%
+  mutate(language = str_to_title(language))
 
 ```
 
@@ -241,7 +245,6 @@ df_merged_r2 = df_r2_by_ablation %>%
 
 summary(df_merged_r2$max_r2_ablated)
 summary(df_merged_r2$r2_prop)
-cor(df_merged_r2$r2_delta, df_merged_r2$r2_prop)
 
 df_merged_r2 %>%
   ggplot(aes(x = r2_prop)) +
@@ -269,30 +272,39 @@ df_merged_r2 %>%
         axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "bottom") +
   facet_wrap(~model_name, ncol = 2) +
-  facet_wrap(~language)
+  facet_wrap(~model_name + language)
 
 
 ### Compare across languages
 df_ablated_wide = df_merged_r2 %>%
   ungroup() %>%
   mutate(head_id = paste(Layer_ablated, "-", Head_ablated)) %>%
-  select(head_id, language, model_name, r2_prop) %>%
+  select(head_id, Head_ablated, Layer_ablated, language, model_name, r2_prop) %>%
   pivot_wider(names_from = c(language),
               values_from = r2_prop) 
 
-cor(df_ablated_wide$english, df_ablated_wide$spanish)
+cor(df_ablated_wide$English, df_ablated_wide$Spanish)
 
 ### TODO: Do these heads overlap with the underlying attention differences?
 df_ablated_wide %>%
-  ggplot(aes(x = english, y = spanish)) +
+  ggplot(aes(x = English, y = Spanish)) +
   geom_point(alpha = .5) +
   theme_minimal() +
   labs(x = "Prop. Intact R2 (English)",
        y = "Prop. Intact R2 (Spanish)") +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+  scale_x_continuous(limits = c(0, .5)) +
+  scale_y_continuous(limits = c(0, .5)) +
   theme(text = element_text(size = 15),
         strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
         axis.text.x = element_text(angle = 45, hjust = 1),
-        legend.position = "bottom") 
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+
+
+
+
   
 ```
 

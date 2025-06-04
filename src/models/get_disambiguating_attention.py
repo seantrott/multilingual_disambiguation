@@ -160,21 +160,22 @@ def main(lang):
     df = pd.read_csv(stim_path)
 
     ### For each language-specific model...
-    """
+    
     for mpath in models:
         just_model_name = mpath.split("/")[1] if "/" in mpath else mpath
 
-        savepath = "data/processed/{dataset}_{model}.csv".format(dataset = dataset, model = just_model_name)
+        savepath = "data/processed/attentions/{dataset}_{model}.csv".format(dataset = dataset, model = just_model_name)
         run_model(df, mpath, savepath, lang=lang, multilingual="No")
-    """
+    
 
     ### Also do for multilingual models
+    """
     for mpath in MULTILINGUAL_MODELS:
         just_model_name = mpath.split("/")[1] if "/" in mpath else mpath
 
-        savepath = "data/processed/{dataset}_{model}.csv".format(dataset = dataset, model = just_model_name)
+        savepath = "data/processed/attentions/{dataset}_{model}.csv".format(dataset = dataset, model = just_model_name)
         run_model(df, mpath, savepath, lang=lang, multilingual="Yes")
-
+    """
 
 
 if __name__ == "__main__":

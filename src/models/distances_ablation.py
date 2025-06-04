@@ -14,10 +14,10 @@ from scipy.spatial.distance import cosine
 
 
 
-MULTILINGUAL_MODELS = ["FacebookAI/xlm-roberta-base",
+MULTILINGUAL_MODELS = [# "FacebookAI/xlm-roberta-base",
           # "google-bert/bert-base-multilingual-cased"
-          "FacebookAI/xlm-roberta-large",
-          # "distilbert/distilbert-base-multilingual-cased"
+          # "FacebookAI/xlm-roberta-large",
+          "distilbert/distilbert-base-multilingual-cased"
           ]
 
 
@@ -182,5 +182,5 @@ def main(lang):
 if __name__ == "__main__":
 
     ## Run main
-    main("english")
+    main("spanish")
 
