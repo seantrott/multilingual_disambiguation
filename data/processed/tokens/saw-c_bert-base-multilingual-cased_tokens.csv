@@ -1,0 +1,452 @@
+sentence,word,string,num_tokens_total,num_tokens_target,num_tokens_disambiguating,mpath,language,multilingual,n_params
+Compró el aceite de oliva.,aceite,aceite,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el aceite de carro.,aceite,aceite,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el aceite de cocina.,aceite,aceite,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el aceite de motor.,aceite,aceite,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el ala sureste.,ala,ala,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el ala remodelada.,ala,ala,11,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el ala plumosa.,ala,ala,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el ala de águila.,ala,ala,10,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Evaluó el algodón endulzado.,algodón,algodón,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Evaluó el algodón sembrado.,algodón,algodón,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Evaluó el algodón caramelizado.,algodón,algodón,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Evaluó el algodón cultivado.,algodón,algodón,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba del arte de mentir.,arte,arte,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba del arte de guerra.,arte,arte,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba del arte abstracto.,arte,arte,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba del arte renacentista.,arte,arte,9,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un banco cómodo.,banco,banco,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un banco exitoso.,banco,banco,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un banco financiero.,banco,banco,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un banco plástico.,banco,banco,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Disfrutó el baño frío.,baño,baño,9,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Disfrutó el baño privado.,baño,baño,9,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Disfrutó el baño remodelado.,baño,baño,12,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Disfrutó el baño caliente.,baño,baño,10,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cadena de radio.,cadena,cadena,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cadena elegante.,cadena,cadena,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cadena de hierro.,cadena,cadena,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cadena de oro.,cadena,cadena,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cadena de reo.,cadena,cadena,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cadena televisiva.,cadena,cadena,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la caja registradora.,caja,caja,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la caja acústica.,caja,caja,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la caja bancaria.,caja,caja,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la caja sellada.,caja,caja,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la caja fuerte.,caja,caja,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la caja percusiva.,caja,caja,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Condujo en la calle marginal.,calle,calle,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Condujo en la calle principal.,calle,calle,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Condujo en la calle asfaltada.,calle,calle,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Condujo en la calle resbalosa.,calle,calle,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un campo competitivo.,campo,campo,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un campo biológico.,campo,campo,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un campo cultivado.,campo,campo,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un campo abandonado.,campo,campo,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el canal uterino.,canal,canal,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el canal televisivo.,canal,canal,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el canal marítimo.,canal,canal,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el canal navegable.,canal,canal,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el canal de comedia.,canal,canal,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el canal cervical.,canal,canal,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la capa de superhéroe.,capa,capa,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la capa de ozono.,capa,capa,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la capa atmosférica.,capa,capa,10,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la capa de tela.,capa,capa,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el capital financiero.,capital,capital,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la capital antigua.,capital,capital,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el capital económico.,capital,capital,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la capital holandesa.,capital,capital,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una carrera académica.,carrera,carrera,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una carrera profesional.,carrera,carrera,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una carrera reñida.,carrera,carrera,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una carrera universitaria.,carrera,carrera,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una carrera benéfica.,carrera,carrera,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una carrera olímpica.,carrera,carrera,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un cartel peligroso.,cartel,cartel,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un cartel publicitario.,cartel,cartel,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un cartel informativo.,cartel,cartel,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un cartel dominante.,cartel,cartel,6,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el casco de la ciclista.,casco,casco,10,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el casco protector.,casco,casco,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el casco urbano.,casco,casco,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el casco de la ciudad.,casco,casco,10,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un caudal financiero.,caudal,caudal,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un caudal ecológico.,caudal,caudal,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un caudal ambiental.,caudal,caudal,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un caudal heredado.,caudal,caudal,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la cima de la loma.,cima,cima,10,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la cima de la fama.,cima,cima,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la cima de la montaña.,cima,cima,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la cima de su carrera.,cima,cima,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Usó la cinta rosada.,cinta,cinta,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Usó la cinta decorativa.,cinta,cinta,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Usó la cinta adhesiva.,cinta,cinta,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Usó la cinta pegante.,cinta,cinta,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Usó la cinta quirúrgica.,cinta,cinta,9,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Usó la cinta métrica.,cinta,cinta,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una clase media.,clase,clase,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una clase aburrida.,clase,clase,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una clase de geología.,clase,clase,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una clase social.,clase,clase,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era la clave musical.,clave,clave,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era la clave esencial.,clave,clave,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era la clave de sol.,clave,clave,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era la clave al caso.,clave,clave,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+El clima estaba tenso.,clima,clima,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+El clima estaba amigable.,clima,clima,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+El clima estaba frío.,clima,clima,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+El clima estaba lluvioso.,clima,clima,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia bacteriana.,colonia,colonia,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia de hombre.,colonia,colonia,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia abandonada.,colonia,colonia,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia fragante.,colonia,colonia,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia rebelde.,colonia,colonia,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia oprimida.,colonia,colonia,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia de hormigas.,colonia,colonia,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una colonia sutil.,colonia,colonia,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una columna de mármol.,columna,columna,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una columna decorativa.,columna,columna,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una columna vertebral.,columna,columna,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una columna encorvada.,columna,columna,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la compañía de actores.,compañía,compañía,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la compañía de inversiones.,compañía,compañía,11,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la compañía financiera.,compañía,compañía,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la compañía teatral.,compañía,compañía,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él cantaba al compás.,compás,compás,8,3,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él navegaba con el compás.,compás,compás,10,3,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él bailaba al compás.,compás,compás,9,3,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él observaba el compás.,compás,compás,8,3,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él vio la copa deportiva.,copa,copa,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él vio la copa mundial.,copa,copa,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él vio la copa de cristal.,copa,copa,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él vio la copa llena.,copa,copa,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él vio la copa vacía.,copa,copa,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía el corazón inflamado.,corazón,corazón,9,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía el corazón partido.,corazón,corazón,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía el corazón operado.,corazón,corazón,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía el corazón angustiado.,corazón,corazón,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un cordón inalámbrico.,cordón,cordón,11,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un cordón biológico.,cordón,cordón,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un cordón eléctrico.,cordón,cordón,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un cordón umbilical.,cordón,cordón,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un cordón sedoso.,cordón,cordón,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un cordón de lona.,cordón,cordón,10,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la corte real.,corte,corte,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el corte asimétrico.,corte,corte,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la corte suprema.,corte,corte,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la corte judicial.,corte,corte,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el corte de pelo.,corte,corte,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la corte noble.,corte,corte,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza del roble.,corteza,corteza,10,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza prefrontal.,corteza,corteza,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza cerebral.,corteza,corteza,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza crocante.,corteza,corteza,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza comestible.,corteza,corteza,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza geológica.,corteza,corteza,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza terrestre.,corteza,corteza,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la corteza del árbol.,corteza,corteza,9,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+No le gustó el cuadro de síntomas.,cuadro,cuadro,12,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+No le gustó el cuadro antiguo.,cuadro,cuadro,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+No le gustó el cuadro barroco.,cuadro,cuadro,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+No le gustó el cuadro clíninco.,cuadro,cuadro,12,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+No le gustó el cuadro diagnóstico.,cuadro,cuadro,10,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+No le gustó el cuadro pintoresco.,cuadro,cuadro,10,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el cubo geométrico.,cubo,cubo,12,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el cubo tridimensional.,cubo,cubo,12,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el cubo plástico.,cubo,cubo,10,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el cubo de madera.,cubo,cubo,10,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía cuerdas sintéticas.,cuerdas,cuerdas,9,3,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía cuerdas fibrosas.,cuerdas,cuerdas,9,3,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía cuerdas de terreno.,cuerdas,cuerdas,8,3,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía cuerdas inflamadas.,cuerdas,cuerdas,10,3,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía cuerdas vocales.,cuerdas,cuerdas,7,3,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía cuerdas forestadas.,cuerdas,cuerdas,8,3,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cura efectiva.,cura,cura,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una cura potente.,cura,cura,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un cura compasivo.,cura,cura,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un cura sabio.,cura,cura,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la cámara principal.,cámara,cámara,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la cámara senatorial.,cámara,cámara,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la cámara profesional.,cámara,cámara,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la cámara gubernamental.,cámara,cámara,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la cámara digital.,cámara,cámara,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de la cámara remodelada.,cámara,cámara,10,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un código de conducta.,código,código,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un código de ética.,código,código,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un código programático.,código,código,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un código númerico.,código,código,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una depresión geológica.,depresión,depresión,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una depresión mental.,depresión,depresión,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una depresión psicológica.,depresión,depresión,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una depresión terrestre.,depresión,depresión,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le preocupaba su estado psicológico.,estado,estado,11,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le preocupaba su estado mental.,estado,estado,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le preocupaba su estado natal.,estado,estado,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le preocupaba su estado sureño.,estado,estado,10,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Carecía fibra nutritiva.,fibra,fibra,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Carecía fibra óptica.,fibra,fibra,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Carecía fibra dietética.,fibra,fibra,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Carecía fibra moral.,fibra,fibra,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Carecía fibra muscular.,fibra,fibra,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una firma caligráfica.,firma,firma,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una firma emprendedora.,firma,firma,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una firma acreditada.,firma,firma,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una firma indescifrable.,firma,firma,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el fondo marino.,fondo,fondo,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el fondo presupuestario.,fondo,fondo,10,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el fondo gubernamental.,fondo,fondo,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el fondo del cuarto.,fondo,fondo,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una fortuna imprevista.,fortuna,fortuna,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una fortuna financiera.,fortuna,fortuna,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una fortuna heredada.,fortuna,fortuna,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una fortuna inesperada.,fortuna,fortuna,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la frase poética.,frase,frase,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la frase lírica.,frase,frase,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la frase melódica.,frase,frase,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la frase musical.,frase,frase,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una frente arrugada.,frente,frente,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una frente amplia.,frente,frente,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un frente lluvioso.,frente,frente,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un frente frío.,frente,frente,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una función lineal.,función,función,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una función social.,función,función,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una función matemática.,función,función,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una función biológica.,función,función,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el gato peludo.,gato,gato,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el gato hidraúlico.,gato,gato,11,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el gato para el auto.,gato,gato,10,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Compró el gato para el niño.,gato,gato,10,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Llamó a la guardia nacional.,guardia,guardia,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Llamó al guardia de seguridad.,guardia,guardia,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Llamó a la guardia costanera.,guardia,guardia,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Llamó al guardia de noche.,guardia,guardia,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una guía televisiva.,guía,guía,6,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una guía turística.,guía,guía,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una guía viajera.,guía,guía,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una guía digital.,guía,guía,6,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una hoja de cálculo.,hoja,hoja,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una hoja verdosa.,hoja,hoja,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una hoja de papel.,hoja,hoja,7,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una hoja de árbol.,hoja,hoja,7,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un hábito irritante.,hábito,hábito,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un hábito de lona.,hábito,hábito,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un hábito de monje.,hábito,hábito,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un hábito rutinario.,hábito,hábito,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gusta la lengua cocida.,lengua,lengua,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gusta la lengua castellana.,lengua,lengua,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gusta la lengua española.,lengua,lengua,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gusta la lengua marinada.,lengua,lengua,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una llama peruana.,llama,llama,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una llama brillante.,llama,llama,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una llama lanuda.,llama,llama,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una llama ardiente.,llama,llama,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una mano dura.,mano,mano,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una mano arrugada.,mano,mano,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una mano sudada.,mano,mano,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una mano de hierro.,mano,mano,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una mano lastimada.,mano,mano,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una muñeca fracturada.,muñeca,muñeca,10,3,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una muñeca lesionada.,muñeca,muñeca,10,3,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una muñeca preciosa.,muñeca,muñeca,9,3,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una muñeca plástica.,muñeca,muñeca,9,3,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una naranja madura.,naranja,naranja,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un naranja oscuro.,naranja,naranja,6,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una naranja jugosa.,naranja,naranja,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un naranja brillante.,naranja,naranja,6,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nave sagrada.,nave,nave,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nave católica.,nave,nave,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nave de madera.,nave,nave,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nave marítima.,nave,nave,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nota musical.,nota,nota,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nota desafinada.,nota,nota,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nota decepcionante.,nota,nota,9,1,5,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nota académica.,nota,nota,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nota aguda.,nota,nota,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una nota satisfactoria.,nota,nota,9,1,5,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una ola migratoria.,ola,ola,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una ola navegable.,ola,ola,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una ola marítima.,ola,ola,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una ola criminal.,ola,ola,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Es una orden católica.,orden,orden,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Es una orden religiosa.,orden,orden,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Es una orden ejecutiva.,orden,orden,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Es una orden jurídica.,orden,orden,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la palma derecha.,palma,palma,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la palma izquierda.,palma,palma,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la palma frondosa.,palma,palma,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la palma de coco.,palma,palma,10,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una papa podrida.,papa,papa,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una papa caliente.,papa,papa,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una papa majada.,papa,papa,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papa conservador.,papa,papa,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papa comprensivo.,papa,papa,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papa jesuita.,papa,papa,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papel secundario.,papel,papel,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papel cuadriculado.,papel,papel,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papel principal.,papel,papel,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un papel amplio.,papel,papel,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Visitó el parque de diversiones.,parque,parque,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Visitó el parque estatal.,parque,parque,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Visitó el parque forestal.,parque,parque,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Visitó el parque de atracciones.,parque,parque,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pasta blanqueadora.,pasta,pasta,11,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pasta dental.,pasta,pasta,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pasta caliente.,pasta,pasta,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pasta italiana.,pasta,pasta,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un pastor eclesiástico.,pastor,pastor,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un pastor evangélico.,pastor,pastor,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un pastor montuno.,pastor,pastor,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un pastor de ovejas.,pastor,pastor,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la pata peluda.,pata,pata,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la pata de la mesa.,pata,pata,9,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la pata de hierro.,pata,pata,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la pata de la gata.,pata,pata,10,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un patrón complicado.,patrón,patrón,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un patrón exigente.,patrón,patrón,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un patrón orgulloso.,patrón,patrón,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un patrón geométrico.,patrón,patrón,8,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un perfil fotogénico.,perfil,perfil,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un perfil psicológico.,perfil,perfil,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un perfil perturbador.,perfil,perfil,10,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un perfil elegante.,perfil,perfil,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un periódico local.,periódico,periódico,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un periódico estrujado.,periódico,periódico,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un periódico plegado.,periódico,periódico,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un periódico global.,periódico,periódico,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó el pico del ave.,pico,pico,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó el pico montuno.,pico,pico,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó el pico alpino.,pico,pico,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó el pico amarillo.,pico,pico,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pieza añadida.,pieza,pieza,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pieza flamenca.,pieza,pieza,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pieza abstracta.,pieza,pieza,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pieza alterada.,pieza,pieza,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pieza musical.,pieza,pieza,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la pieza contemporánea.,pieza,pieza,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una pista falsa.,pista,pista,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una pista resbalosa.,pista,pista,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una pista de baile.,pista,pista,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una pista clave.,pista,pista,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la planta superior.,planta,planta,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la planta izquierda.,planta,planta,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la planta baja.,planta,planta,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la planta del pie.,planta,planta,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la planta tropical.,planta,planta,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en la planta venenosa.,planta,planta,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pluma fuente.,pluma,pluma,7,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pluma albina.,pluma,pluma,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pluma estilográfica.,pluma,pluma,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pluma silvestre.,pluma,pluma,9,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en una posición fetal.,posición,posición,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en una posición ventajosa.,posición,posición,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en una posición sentada.,posición,posición,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en una posición oportuna.,posición,posición,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una prima costosa.,prima,prima,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una prima anual.,prima,prima,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una prima hermana.,prima,prima,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una prima atenta.,prima,prima,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pupila dilatada.,pupila,pupila,9,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pupila estudiosa.,pupila,pupila,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pupila aplicada.,pupila,pupila,7,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía una pupila contraída.,pupila,pupila,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un químico negligente.,químico,químico,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un químico tóxico.,químico,químico,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un químico orgánico.,químico,químico,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un químico exitoso.,químico,químico,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una rama retorcida.,rama,rama,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una rama disecada.,rama,rama,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una rama médica.,rama,rama,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una rama competitiva.,rama,rama,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó una raya precisa.,raya,raya,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó una raya marina.,raya,raya,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó una raya endémica.,raya,raya,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Dibujó una raya recta.,raya,raya,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una red cibernética.,red,red,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una red pesquera.,red,red,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una red de cuerda.,red,red,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una red privada.,red,red,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una redada en el barrio.,redada,redada,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una redada policiaca.,redada,redada,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una redada en el río.,redada,redada,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Fue una redada pesquera.,redada,redada,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una resistencia de circuito.,resistencia,resistencia,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una resistencia militar.,resistencia,resistencia,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una resistencia eléctrica.,resistencia,resistencia,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una resistencia política.,resistencia,resistencia,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una revista deportiva.,revista,revista,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una revista de belleza.,revista,revista,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una revista brillosa.,revista,revista,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una revista estrujada.,revista,revista,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un rosa claro.,rosa,rosa,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una rosa frágil.,rosa,rosa,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una rosa fragante.,rosa,rosa,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un rosa tenue.,rosa,rosa,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él tiene sangre noble.,sangre,sangre,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él tiene sangre diluida.,sangre,sangre,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él tiene sangre real.,sangre,sangre,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él tiene sangre coagulada.,sangre,sangre,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una semilla germinada.,semilla,semilla,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una semilla educativa.,semilla,semilla,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una semilla sembrada.,semilla,semilla,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una semilla cultural.,semilla,semilla,6,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el seno familiar.,seno,seno,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el seno operado.,seno,seno,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el seno social.,seno,seno,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Estaba en el seno izquiero.,seno,seno,9,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una serie matemática.,serie,serie,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una serie televisiva.,serie,serie,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una serie numérica.,serie,serie,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de una serie animada.,serie,serie,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sierra eléctrica.,sierra,sierra,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sierra nevada.,sierra,sierra,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sierra automática.,sierra,sierra,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sierra forestada.,sierra,sierra,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sirena coqueta.,sirena,sirena,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sirena mitológica.,sirena,sirena,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sirena policíaca.,sirena,sirena,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era una sirena ruidosa.,sirena,sirena,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un sostén incómodo.,sostén,sostén,9,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un sostén incondicional.,sostén,sostén,9,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un sostén sedoso.,sostén,sostén,7,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Era un sostén emocional.,sostén,sostén,8,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él moría de sueño.,sueño,sueño,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él alcanzó su sueño.,sueño,sueño,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él relató su sueño.,sueño,sueño,7,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él abandonó su sueño.,sueño,sueño,5,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él recordó su sueño.,sueño,sueño,6,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Él tenía sueño.,sueño,sueño,4,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la tabla astillada.,tabla,tabla,10,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la tabla de ajedrez.,tabla,tabla,11,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la tabla de madera.,tabla,tabla,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó la tabla de juego.,tabla,tabla,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el taco mexicano.,taco,taco,9,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el taco puntiagudo.,taco,taco,11,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el taco delicioso.,taco,taco,11,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el taco del zapato.,taco,taco,11,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tocó la tecla del ordenador.,tecla,tecla,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tocó la tecla espaciadora.,tecla,tecla,10,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tocó la tecla desafinada.,tecla,tecla,9,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tocó la tecla afinada.,tecla,tecla,8,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el título propietario.,título,título,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el título del libro.,título,título,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el título legal.,título,título,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el título halagador.,título,título,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el título del poema.,título,título,9,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Le gustó el título profesional.,título,título,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un vaso cristalino.,vaso,vaso,9,2,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un vaso antiguo.,vaso,vaso,8,2,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un vaso sanguíneo.,vaso,vaso,11,2,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Se trataba de un vaso obstruido.,vaso,vaso,10,2,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la vela derretida.,vela,vela,8,1,3,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la vela de lona.,vela,vela,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la vela de cera.,vela,vela,8,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Ella vio la vela del barco.,vela,vela,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Aumentó el volumen de la corriente.,volumen,volumen,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Aumentó el volumen del agua.,volumen,volumen,7,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Aumentó el volumen de la bocina.,volumen,volumen,9,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Aumentó el volumen de la voz.,volumen,volumen,8,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía un órgano ceremonial.,órgano,órgano,6,1,1,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía un órgano eclesiástico.,órgano,órgano,9,1,4,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía un órgano herido.,órgano,órgano,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440
+Tenía un órgano operado.,órgano,órgano,7,1,2,google-bert/bert-base-multilingual-cased,spanish,Yes,177853440

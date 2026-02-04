@@ -1,0 +1,452 @@
+sentence,word,string,num_tokens_total,num_tokens_target,num_tokens_disambiguating,mpath,language,multilingual,n_params
+Compró el aceite de oliva.,aceite,aceite,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el aceite de carro.,aceite,aceite,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el aceite de cocina.,aceite,aceite,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el aceite de motor.,aceite,aceite,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el ala sureste.,ala,ala,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el ala remodelada.,ala,ala,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el ala plumosa.,ala,ala,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el ala de águila.,ala,ala,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Evaluó el algodón endulzado.,algodón,algodón,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Evaluó el algodón sembrado.,algodón,algodón,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Evaluó el algodón caramelizado.,algodón,algodón,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Evaluó el algodón cultivado.,algodón,algodón,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba del arte de mentir.,arte,arte,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba del arte de guerra.,arte,arte,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba del arte abstracto.,arte,arte,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba del arte renacentista.,arte,arte,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un banco cómodo.,banco,banco,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un banco exitoso.,banco,banco,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un banco financiero.,banco,banco,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un banco plástico.,banco,banco,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Disfrutó el baño frío.,baño,baño,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Disfrutó el baño privado.,baño,baño,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Disfrutó el baño remodelado.,baño,baño,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Disfrutó el baño caliente.,baño,baño,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cadena de radio.,cadena,cadena,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cadena elegante.,cadena,cadena,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cadena de hierro.,cadena,cadena,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cadena de oro.,cadena,cadena,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cadena de reo.,cadena,cadena,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cadena televisiva.,cadena,cadena,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la caja registradora.,caja,caja,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la caja acústica.,caja,caja,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la caja bancaria.,caja,caja,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la caja sellada.,caja,caja,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la caja fuerte.,caja,caja,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la caja percusiva.,caja,caja,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Condujo en la calle marginal.,calle,calle,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Condujo en la calle principal.,calle,calle,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Condujo en la calle asfaltada.,calle,calle,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Condujo en la calle resbalosa.,calle,calle,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un campo competitivo.,campo,campo,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un campo biológico.,campo,campo,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un campo cultivado.,campo,campo,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un campo abandonado.,campo,campo,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el canal uterino.,canal,canal,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el canal televisivo.,canal,canal,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el canal marítimo.,canal,canal,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el canal navegable.,canal,canal,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el canal de comedia.,canal,canal,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el canal cervical.,canal,canal,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la capa de superhéroe.,capa,capa,9,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la capa de ozono.,capa,capa,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la capa atmosférica.,capa,capa,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la capa de tela.,capa,capa,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el capital financiero.,capital,capital,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la capital antigua.,capital,capital,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el capital económico.,capital,capital,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la capital holandesa.,capital,capital,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una carrera académica.,carrera,carrera,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una carrera profesional.,carrera,carrera,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una carrera reñida.,carrera,carrera,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una carrera universitaria.,carrera,carrera,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una carrera benéfica.,carrera,carrera,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una carrera olímpica.,carrera,carrera,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un cartel peligroso.,cartel,cartel,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un cartel publicitario.,cartel,cartel,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un cartel informativo.,cartel,cartel,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un cartel dominante.,cartel,cartel,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el casco de la ciclista.,casco,casco,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el casco protector.,casco,casco,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el casco urbano.,casco,casco,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el casco de la ciudad.,casco,casco,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un caudal financiero.,caudal,caudal,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un caudal ecológico.,caudal,caudal,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un caudal ambiental.,caudal,caudal,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un caudal heredado.,caudal,caudal,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la cima de la loma.,cima,cima,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la cima de la fama.,cima,cima,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la cima de la montaña.,cima,cima,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la cima de su carrera.,cima,cima,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Usó la cinta rosada.,cinta,cinta,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Usó la cinta decorativa.,cinta,cinta,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Usó la cinta adhesiva.,cinta,cinta,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Usó la cinta pegante.,cinta,cinta,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Usó la cinta quirúrgica.,cinta,cinta,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Usó la cinta métrica.,cinta,cinta,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una clase media.,clase,clase,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una clase aburrida.,clase,clase,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una clase de geología.,clase,clase,9,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una clase social.,clase,clase,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era la clave musical.,clave,clave,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era la clave esencial.,clave,clave,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era la clave de sol.,clave,clave,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era la clave al caso.,clave,clave,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+El clima estaba tenso.,clima,clima,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+El clima estaba amigable.,clima,clima,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+El clima estaba frío.,clima,clima,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+El clima estaba lluvioso.,clima,clima,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia bacteriana.,colonia,colonia,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia de hombre.,colonia,colonia,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia abandonada.,colonia,colonia,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia fragante.,colonia,colonia,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia rebelde.,colonia,colonia,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia oprimida.,colonia,colonia,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia de hormigas.,colonia,colonia,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una colonia sutil.,colonia,colonia,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una columna de mármol.,columna,columna,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una columna decorativa.,columna,columna,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una columna vertebral.,columna,columna,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una columna encorvada.,columna,columna,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la compañía de actores.,compañía,compañía,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la compañía de inversiones.,compañía,compañía,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la compañía financiera.,compañía,compañía,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la compañía teatral.,compañía,compañía,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él cantaba al compás.,compás,compás,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él navegaba con el compás.,compás,compás,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él bailaba al compás.,compás,compás,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él observaba el compás.,compás,compás,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él vio la copa deportiva.,copa,copa,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él vio la copa mundial.,copa,copa,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él vio la copa de cristal.,copa,copa,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él vio la copa llena.,copa,copa,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él vio la copa vacía.,copa,copa,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía el corazón inflamado.,corazón,corazón,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía el corazón partido.,corazón,corazón,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía el corazón operado.,corazón,corazón,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía el corazón angustiado.,corazón,corazón,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un cordón inalámbrico.,cordón,cordón,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un cordón biológico.,cordón,cordón,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un cordón eléctrico.,cordón,cordón,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un cordón umbilical.,cordón,cordón,9,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un cordón sedoso.,cordón,cordón,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un cordón de lona.,cordón,cordón,9,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la corte real.,corte,corte,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el corte asimétrico.,corte,corte,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la corte suprema.,corte,corte,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la corte judicial.,corte,corte,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el corte de pelo.,corte,corte,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la corte noble.,corte,corte,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza del roble.,corteza,corteza,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza prefrontal.,corteza,corteza,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza cerebral.,corteza,corteza,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza crocante.,corteza,corteza,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza comestible.,corteza,corteza,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza geológica.,corteza,corteza,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza terrestre.,corteza,corteza,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la corteza del árbol.,corteza,corteza,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+No le gustó el cuadro de síntomas.,cuadro,cuadro,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+No le gustó el cuadro antiguo.,cuadro,cuadro,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+No le gustó el cuadro barroco.,cuadro,cuadro,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+No le gustó el cuadro clíninco.,cuadro,cuadro,9,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+No le gustó el cuadro diagnóstico.,cuadro,cuadro,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+No le gustó el cuadro pintoresco.,cuadro,cuadro,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el cubo geométrico.,cubo,cubo,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el cubo tridimensional.,cubo,cubo,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el cubo plástico.,cubo,cubo,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el cubo de madera.,cubo,cubo,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía cuerdas sintéticas.,cuerdas,cuerdas,4,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía cuerdas fibrosas.,cuerdas,cuerdas,6,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía cuerdas de terreno.,cuerdas,cuerdas,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía cuerdas inflamadas.,cuerdas,cuerdas,5,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía cuerdas vocales.,cuerdas,cuerdas,4,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía cuerdas forestadas.,cuerdas,cuerdas,5,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cura efectiva.,cura,cura,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una cura potente.,cura,cura,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un cura compasivo.,cura,cura,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un cura sabio.,cura,cura,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la cámara principal.,cámara,cámara,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la cámara senatorial.,cámara,cámara,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la cámara profesional.,cámara,cámara,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la cámara gubernamental.,cámara,cámara,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la cámara digital.,cámara,cámara,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de la cámara remodelada.,cámara,cámara,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un código de conducta.,código,código,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un código de ética.,código,código,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un código programático.,código,código,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un código númerico.,código,código,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una depresión geológica.,depresión,depresión,9,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una depresión mental.,depresión,depresión,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una depresión psicológica.,depresión,depresión,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una depresión terrestre.,depresión,depresión,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le preocupaba su estado psicológico.,estado,estado,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le preocupaba su estado mental.,estado,estado,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le preocupaba su estado natal.,estado,estado,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le preocupaba su estado sureño.,estado,estado,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Carecía fibra nutritiva.,fibra,fibra,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Carecía fibra óptica.,fibra,fibra,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Carecía fibra dietética.,fibra,fibra,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Carecía fibra moral.,fibra,fibra,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Carecía fibra muscular.,fibra,fibra,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una firma caligráfica.,firma,firma,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una firma emprendedora.,firma,firma,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una firma acreditada.,firma,firma,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una firma indescifrable.,firma,firma,8,1,4,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el fondo marino.,fondo,fondo,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el fondo presupuestario.,fondo,fondo,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el fondo gubernamental.,fondo,fondo,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el fondo del cuarto.,fondo,fondo,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una fortuna imprevista.,fortuna,fortuna,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una fortuna financiera.,fortuna,fortuna,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una fortuna heredada.,fortuna,fortuna,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una fortuna inesperada.,fortuna,fortuna,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la frase poética.,frase,frase,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la frase lírica.,frase,frase,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la frase melódica.,frase,frase,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la frase musical.,frase,frase,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una frente arrugada.,frente,frente,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una frente amplia.,frente,frente,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un frente lluvioso.,frente,frente,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un frente frío.,frente,frente,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una función lineal.,función,función,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una función social.,función,función,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una función matemática.,función,función,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una función biológica.,función,función,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el gato peludo.,gato,gato,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el gato hidraúlico.,gato,gato,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el gato para el auto.,gato,gato,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Compró el gato para el niño.,gato,gato,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Llamó a la guardia nacional.,guardia,guardia,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Llamó al guardia de seguridad.,guardia,guardia,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Llamó a la guardia costanera.,guardia,guardia,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Llamó al guardia de noche.,guardia,guardia,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una guía televisiva.,guía,guía,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una guía turística.,guía,guía,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una guía viajera.,guía,guía,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una guía digital.,guía,guía,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una hoja de cálculo.,hoja,hoja,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una hoja verdosa.,hoja,hoja,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una hoja de papel.,hoja,hoja,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una hoja de árbol.,hoja,hoja,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un hábito irritante.,hábito,hábito,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un hábito de lona.,hábito,hábito,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un hábito de monje.,hábito,hábito,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un hábito rutinario.,hábito,hábito,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gusta la lengua cocida.,lengua,lengua,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gusta la lengua castellana.,lengua,lengua,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gusta la lengua española.,lengua,lengua,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gusta la lengua marinada.,lengua,lengua,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una llama peruana.,llama,llama,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una llama brillante.,llama,llama,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una llama lanuda.,llama,llama,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una llama ardiente.,llama,llama,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una mano dura.,mano,mano,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una mano arrugada.,mano,mano,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una mano sudada.,mano,mano,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una mano de hierro.,mano,mano,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una mano lastimada.,mano,mano,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una muñeca fracturada.,muñeca,muñeca,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una muñeca lesionada.,muñeca,muñeca,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una muñeca preciosa.,muñeca,muñeca,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una muñeca plástica.,muñeca,muñeca,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una naranja madura.,naranja,naranja,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un naranja oscuro.,naranja,naranja,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una naranja jugosa.,naranja,naranja,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un naranja brillante.,naranja,naranja,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nave sagrada.,nave,nave,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nave católica.,nave,nave,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nave de madera.,nave,nave,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nave marítima.,nave,nave,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nota musical.,nota,nota,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nota desafinada.,nota,nota,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nota decepcionante.,nota,nota,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nota académica.,nota,nota,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nota aguda.,nota,nota,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una nota satisfactoria.,nota,nota,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una ola migratoria.,ola,ola,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una ola navegable.,ola,ola,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una ola marítima.,ola,ola,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una ola criminal.,ola,ola,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Es una orden católica.,orden,orden,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Es una orden religiosa.,orden,orden,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Es una orden ejecutiva.,orden,orden,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Es una orden jurídica.,orden,orden,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la palma derecha.,palma,palma,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la palma izquierda.,palma,palma,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la palma frondosa.,palma,palma,8,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la palma de coco.,palma,palma,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una papa podrida.,papa,papa,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una papa caliente.,papa,papa,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una papa majada.,papa,papa,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papa conservador.,papa,papa,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papa comprensivo.,papa,papa,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papa jesuita.,papa,papa,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papel secundario.,papel,papel,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papel cuadriculado.,papel,papel,8,1,4,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papel principal.,papel,papel,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un papel amplio.,papel,papel,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Visitó el parque de diversiones.,parque,parque,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Visitó el parque estatal.,parque,parque,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Visitó el parque forestal.,parque,parque,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Visitó el parque de atracciones.,parque,parque,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pasta blanqueadora.,pasta,pasta,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pasta dental.,pasta,pasta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pasta caliente.,pasta,pasta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pasta italiana.,pasta,pasta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un pastor eclesiástico.,pastor,pastor,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un pastor evangélico.,pastor,pastor,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un pastor montuno.,pastor,pastor,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un pastor de ovejas.,pastor,pastor,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la pata peluda.,pata,pata,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la pata de la mesa.,pata,pata,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la pata de hierro.,pata,pata,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la pata de la gata.,pata,pata,9,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un patrón complicado.,patrón,patrón,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un patrón exigente.,patrón,patrón,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un patrón orgulloso.,patrón,patrón,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un patrón geométrico.,patrón,patrón,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un perfil fotogénico.,perfil,perfil,9,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un perfil psicológico.,perfil,perfil,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un perfil perturbador.,perfil,perfil,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un perfil elegante.,perfil,perfil,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un periódico local.,periódico,periódico,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un periódico estrujado.,periódico,periódico,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un periódico plegado.,periódico,periódico,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un periódico global.,periódico,periódico,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó el pico del ave.,pico,pico,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó el pico montuno.,pico,pico,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó el pico alpino.,pico,pico,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó el pico amarillo.,pico,pico,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pieza añadida.,pieza,pieza,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pieza flamenca.,pieza,pieza,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pieza abstracta.,pieza,pieza,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pieza alterada.,pieza,pieza,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pieza musical.,pieza,pieza,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la pieza contemporánea.,pieza,pieza,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una pista falsa.,pista,pista,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una pista resbalosa.,pista,pista,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una pista de baile.,pista,pista,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una pista clave.,pista,pista,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la planta superior.,planta,planta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la planta izquierda.,planta,planta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la planta baja.,planta,planta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la planta del pie.,planta,planta,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la planta tropical.,planta,planta,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en la planta venenosa.,planta,planta,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pluma fuente.,pluma,pluma,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pluma albina.,pluma,pluma,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pluma estilográfica.,pluma,pluma,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pluma silvestre.,pluma,pluma,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en una posición fetal.,posición,posición,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en una posición ventajosa.,posición,posición,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en una posición sentada.,posición,posición,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en una posición oportuna.,posición,posición,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una prima costosa.,prima,prima,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una prima anual.,prima,prima,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una prima hermana.,prima,prima,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una prima atenta.,prima,prima,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pupila dilatada.,pupila,pupila,8,3,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pupila estudiosa.,pupila,pupila,8,3,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pupila aplicada.,pupila,pupila,7,3,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía una pupila contraída.,pupila,pupila,8,3,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un químico negligente.,químico,químico,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un químico tóxico.,químico,químico,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un químico orgánico.,químico,químico,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un químico exitoso.,químico,químico,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una rama retorcida.,rama,rama,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una rama disecada.,rama,rama,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una rama médica.,rama,rama,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una rama competitiva.,rama,rama,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó una raya precisa.,raya,raya,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó una raya marina.,raya,raya,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó una raya endémica.,raya,raya,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Dibujó una raya recta.,raya,raya,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una red cibernética.,red,red,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una red pesquera.,red,red,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una red de cuerda.,red,red,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una red privada.,red,red,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una redada en el barrio.,redada,redada,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una redada policiaca.,redada,redada,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una redada en el río.,redada,redada,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Fue una redada pesquera.,redada,redada,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una resistencia de circuito.,resistencia,resistencia,8,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una resistencia militar.,resistencia,resistencia,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una resistencia eléctrica.,resistencia,resistencia,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una resistencia política.,resistencia,resistencia,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una revista deportiva.,revista,revista,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una revista de belleza.,revista,revista,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una revista brillosa.,revista,revista,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una revista estrujada.,revista,revista,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un rosa claro.,rosa,rosa,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una rosa frágil.,rosa,rosa,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una rosa fragante.,rosa,rosa,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un rosa tenue.,rosa,rosa,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él tiene sangre noble.,sangre,sangre,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él tiene sangre diluida.,sangre,sangre,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él tiene sangre real.,sangre,sangre,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él tiene sangre coagulada.,sangre,sangre,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una semilla germinada.,semilla,semilla,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una semilla educativa.,semilla,semilla,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una semilla sembrada.,semilla,semilla,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una semilla cultural.,semilla,semilla,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el seno familiar.,seno,seno,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el seno operado.,seno,seno,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el seno social.,seno,seno,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Estaba en el seno izquiero.,seno,seno,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una serie matemática.,serie,serie,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una serie televisiva.,serie,serie,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una serie numérica.,serie,serie,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de una serie animada.,serie,serie,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sierra eléctrica.,sierra,sierra,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sierra nevada.,sierra,sierra,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sierra automática.,sierra,sierra,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sierra forestada.,sierra,sierra,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sirena coqueta.,sirena,sirena,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sirena mitológica.,sirena,sirena,7,1,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sirena policíaca.,sirena,sirena,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era una sirena ruidosa.,sirena,sirena,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un sostén incómodo.,sostén,sostén,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un sostén incondicional.,sostén,sostén,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un sostén sedoso.,sostén,sostén,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Era un sostén emocional.,sostén,sostén,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él moría de sueño.,sueño,sueño,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él alcanzó su sueño.,sueño,sueño,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él relató su sueño.,sueño,sueño,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él abandonó su sueño.,sueño,sueño,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él recordó su sueño.,sueño,sueño,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Él tenía sueño.,sueño,sueño,4,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la tabla astillada.,tabla,tabla,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la tabla de ajedrez.,tabla,tabla,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la tabla de madera.,tabla,tabla,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó la tabla de juego.,tabla,tabla,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el taco mexicano.,taco,taco,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el taco puntiagudo.,taco,taco,9,1,4,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el taco delicioso.,taco,taco,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el taco del zapato.,taco,taco,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tocó la tecla del ordenador.,tecla,tecla,7,2,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tocó la tecla espaciadora.,tecla,tecla,8,2,3,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tocó la tecla desafinada.,tecla,tecla,7,2,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tocó la tecla afinada.,tecla,tecla,7,2,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el título propietario.,título,título,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el título del libro.,título,título,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el título legal.,título,título,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el título halagador.,título,título,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el título del poema.,título,título,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Le gustó el título profesional.,título,título,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un vaso cristalino.,vaso,vaso,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un vaso antiguo.,vaso,vaso,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un vaso sanguíneo.,vaso,vaso,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Se trataba de un vaso obstruido.,vaso,vaso,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la vela derretida.,vela,vela,7,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la vela de lona.,vela,vela,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la vela de cera.,vela,vela,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Ella vio la vela del barco.,vela,vela,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Aumentó el volumen de la corriente.,volumen,volumen,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Aumentó el volumen del agua.,volumen,volumen,6,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Aumentó el volumen de la bocina.,volumen,volumen,8,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Aumentó el volumen de la voz.,volumen,volumen,7,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía un órgano ceremonial.,órgano,órgano,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía un órgano eclesiástico.,órgano,órgano,6,1,2,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía un órgano herido.,órgano,órgano,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304
+Tenía un órgano operado.,órgano,órgano,5,1,1,dccuchile/distilbert-base-spanish-uncased,spanish,No,66338304

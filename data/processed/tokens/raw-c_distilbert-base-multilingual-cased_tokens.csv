@@ -1,0 +1,449 @@
+sentence,word,string,num_tokens_total,num_tokens_target,num_tokens_disambiguating,mpath,language,multilingual,n_params
+It was a desperate act.,act,act,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a humane act.,act,act,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a magic act.,act,act,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a universal appeal.,appeal,appeal,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had an undefinable appeal.,appeal,appeal,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a legal appeal.,appeal,appeal,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a tense atmosphere.,atmosphere,atmosphere,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a hostile atmosphere.,atmosphere,atmosphere,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a gaseous atmosphere.,atmosphere,atmosphere,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He bailed out the prisoner.,bail,bailed,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He bailed out the defendant.,bail,bailed,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He bailed out the water.,bail,bailed,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a gold band.,band,band,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a rubber band.,band,band,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a jazz band.,band,band,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He banked the plane.,bank,banked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He banked the helicopter.,bank,banked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He banked the money.,bank,banked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a police barrier.,barrier,barrier,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a concrete barrier.,barrier,barrier,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a language barrier.,barrier,barrier,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw a furry bat.,bat,bat,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw a fruit bat.,bat,bat,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw a wooden bat.,bat,bat,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the laser beam.,beam,beam,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the bright beam.,beam,beam,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the wood beam.,beam,beam,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a toy block.,block,block,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a wooden block.,block,block,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a mental block.,block,block,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He has coagulated blood.,blood,blood,7,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He has thin blood.,blood,blood,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He has noble blood.,blood,blood,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was the ironing board.,board,board,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was the wooden board.,board,board,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was the executive board.,board,board,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a best-selling book.,book,book,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a popular book.,book,book,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a heavy book.,book,book,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He broke the glass.,break,broke,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He broke the dish.,break,broke,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He broke the law.,break,broke,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They ate a pancake breakfast.,breakfast,breakfast,10,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They ate a nutritious breakfast.,breakfast,breakfast,11,2,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They ate a family breakfast.,breakfast,breakfast,8,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They called the landlord.,call,called,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They called the police.,call,called,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They called the loan.,call,called,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a red cape.,cape,cape,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a flowing cape.,cape,cape,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a rocky cape.,cape,cape,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a beer case.,case,case,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a display case.,case,case,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a divorce case.,case,case,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She cast a shadow.,cast,cast,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She cast a glow.,cast,cast,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She cast a spear.,cast,cast,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a worthy cause.,cause,cause,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a political cause.,cause,cause,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a main cause.,cause,cause,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a skin cell.,cell,cell,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a brain cell.,cell,cell,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a prison cell.,cell,cell,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a devilish charm.,charm,charm,9,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a natural charm.,charm,charm,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a gold charm.,charm,charm,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He checked the engine.,check,checked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He checked the oven.,check,checked,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He checked the alibi.,check,checked,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the juicy chicken.,chicken,chicken,9,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the roasted chicken.,chicken,chicken,10,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the clucking chicken.,chicken,chicken,10,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a perceptive class.,class,class,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a misbehaving class.,class,class,9,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a boring class.,class,class,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He cleared the desk.,clear,cleared,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He cleared the shelf.,clear,cleared,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He cleared the path.,clear,cleared,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a film clip.,clip,clip,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a video clip.,clip,clip,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a hair clip.,clip,clip,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The dancer clogged.,clog,clogged,6,3,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The choreographer clogged.,clog,clogged,8,3,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The pipe clogged.,clog,clogged,6,3,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an icy cold.,cold,cold,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a freezing cold.,cold,cold,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a chest cold.,cold,cold,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a gossip column.,column,column,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a sports column.,column,column,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a concrete column.,column,column,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the investment company.,company,company,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the pharmaceutical company.,company,company,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the pleasant company.,company,company,9,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a waffle cone.,cone,cone,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a sugar cone.,cone,cone,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an orange cone.,cone,cone,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He made a charitable contribution.,contribution,contribution,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He made a voluntary contribution.,contribution,contribution,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He made a scholarly contribution.,contribution,contribution,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was the noble count.,count,count,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was the vengeful count.,count,count,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was the final count.,count,count,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an introductory course.,course,course,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a pass-fail course.,course,course,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a charted course.,course,course,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He crossed a road.,cross,crossed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He crossed a room.,cross,crossed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He crossed an enemy.,cross,crossed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a dinner date.,date,date,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a blind date.,date,date,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an expiration date.,date,date,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was about forty degrees.,degree,degrees,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was about fifty degrees.,degree,degrees,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was about associate degrees.,degree,degrees,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the floral design.,design,design,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the geometric design.,design,design,9,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the product design.,design,design,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the turkey dinner.,dinner,dinner,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the light dinner.,dinner,dinner,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the formal dinner.,dinner,dinner,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They drained the account.,drain,drained,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They drained the budget.,drain,drained,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They drained the pool.,drain,drained,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He drew a gun.,draw,drew,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He drew a sword.,draw,drew,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He drew a tree.,draw,drew,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a recurring dream.,dream,dream,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a bad dream.,dream,dream,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a childhood dream.,dream,dream,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a grueling drill.,drill,drill,9,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a challenging drill.,drill,drill,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an electric drill.,drill,drill,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a multiple-choice examination.,examination,examination,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a difficult examination.,examination,examination,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a prostate examination.,examination,examination,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had an electric fan.,fan,fan,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had a ceiling fan.,fan,fan,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had a zealous fan.,fan,fan,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a text file.,file,file,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a data file.,file,file,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a nail file.,file,file,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an action film.,film,film,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a censored film.,film,film,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a transparent film.,film,film,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They fixed the radio.,fix,fixed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They fixed the dishwasher.,fix,fixed,7,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They fixed the date.,fix,fixed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a charitable foundation.,foundation,foundation,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an educational foundation.,foundation,foundation,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a wooden foundation.,foundation,foundation,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a mathematical function.,function,function,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a linear function.,function,function,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a social function.,function,function,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was on the firm ground.,ground,ground,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was on the frozen ground.,ground,ground,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was on the camp ground.,ground,ground,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the night guard.,guard,guard,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the security guard.,guard,guard,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the coast guard.,guard,guard,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had an assembly guide.,guide,guide,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a TV guide.,guide,guide,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a talkative guide.,guide,guide,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They hailed a cab.,hail,hailed,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They hailed a taxi.,hail,hailed,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They hailed a friend.,hail,hailed,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a summer home.,home,home,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a childhood home.,home,home,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a funeral home.,home,home,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had natural intelligence.,intelligence,intelligence,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had innate intelligence.,intelligence,intelligence,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had classified intelligence.,intelligence,intelligence,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a sensitive issue.,issue,issue,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a political issue.,issue,issue,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a weekly issue.,issue,issue,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a blackberry jam.,jam,jam,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a peach jam.,jam,jam,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a traffic jam.,jam,jam,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a duplicate key.,key,key,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a master key.,key,key,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a delete key.,key,key,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the marinated lamb.,lamb,lamb,9,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the grilled lamb.,lamb,lamb,10,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the cute lamb.,lamb,lamb,9,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She lapped the milk.,lap,lapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She lapped the water.,lap,lapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She lapped the runners.,lap,lapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She loaded the gun.,load,loaded,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She loaded the rifle.,load,loaded,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She loaded the truck.,load,loaded,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had curly locks.,lock,locks,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had brown locks.,lock,locks,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had window locks.,lock,locks,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the hot lunch.,lunch,lunch,8,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the sandwich lunch.,lunch,lunch,9,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the afternoon lunch.,lunch,lunch,8,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the flea market.,market,market,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the fish market.,market,market,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the housing market.,market,market,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a lit match.,match,match,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a burning match.,match,match,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a soccer match.,match,match,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was cough medicine.,medicine,medicine,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was prescription medicine.,medicine,medicine,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was orthopedic medicine.,medicine,medicine,8,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a phone message.,message,message,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a computer message.,message,message,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was an urgent message.,message,message,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a fungal mold.,mold,mold,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a harmful mold.,mold,mold,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a rubber mold.,mold,mold,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the cancerous mole.,mole,mole,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the raised mole.,mole,mole,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the cute mole.,mole,mole,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the rhythmic movement.,movement,movement,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the graceful movement.,movement,movement,9,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the feminist movement.,movement,movement,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a national newspaper.,newspaper,newspaper,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a daily newspaper.,newspaper,newspaper,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a faded newspaper.,newspaper,newspaper,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a juicy orange.,orange,orange,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a ripe orange.,orange,orange,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a bright orange.,orange,orange,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the young page.,page,page,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the loyal page.,page,page,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the blank page.,page,page,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a calloused palm.,palm,palm,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a wrinkled palm.,palm,palm,9,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a tropical palm.,palm,palm,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a control panel.,panel,panel,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an instrument panel.,panel,panel,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an advisory panel.,panel,panel,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a secret passage.,passage,passage,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a narrow passage.,passage,passage,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a literary passage.,passage,passage,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She penned her animals.,pen,penned,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She penned her livestock.,pen,penned,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She penned her memoirs.,pen,penned,8,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a tasty perch.,perch,perch,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a freshwater perch.,perch,perch,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a lofty perch.,perch,perch,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He picked his coffee.,pick,picked,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He picked his dinner.,pick,picked,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He picked his scab.,pick,picked,7,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the fast pitcher.,pitcher,pitcher,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the right-handed pitcher.,pitcher,pitcher,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the glass pitcher.,pitcher,pitcher,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She poached the deer.,poach,poached,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She poached the bear.,poach,poached,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She poached the eggs.,poach,poached,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a windy port.,port,port,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a seaside port.,port,port,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a delicious port.,port,port,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was in a distinguished position.,position,position,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was in a prominent position.,position,position,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was in a fetal position.,position,position,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a wooden post.,post,post,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a fence post.,post,post,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a teaching post.,post,post,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had the alcoholic punch.,punch,punch,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had the fruit punch.,punch,punch,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had the strongest punch.,punch,punch,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a brilliant pupil.,pupil,pupil,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had an interested pupil.,pupil,pupil,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a dilated pupil.,pupil,pupil,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He pushed the cocaine.,push,pushed,7,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He pushed the drugs.,push,pushed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He pushed the bed.,push,pushed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was a loud racket.,racket,racket,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was an annoying racket.,racket,racket,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was a badminton racket.,racket,racket,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked electronic rock.,rock,rock,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked alternative rock.,rock,rock,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked limestone rock.,rock,rock,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She ran the marathon.,run,ran,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She ran the race.,run,ran,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She ran the shop.,run,ran,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the wise sage.,sage,sage,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the renowned sage.,sage,sage,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the fragrant sage.,sage,sage,9,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a fish scale.,scale,scale,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a lizard scale.,scale,scale,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a music scale.,scale,scale,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a touching scene.,scene,scene,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a well-acted scene.,scene,scene,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a nature scene.,scene,scene,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a gold seal.,seal,seal,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a certified seal.,seal,seal,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a circus seal.,seal,seal,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She served a pie.,serve,served,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She served a lasagna.,serve,served,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She served a summons.,serve,served,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The girl sang.,sing,sang,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The choir sang.,sing,sang,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The bird sang.,sing,sang,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He spilled the drink.,spill,spilled,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He spilled the flour.,spill,spilled,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He spilled the news.,spill,spilled,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He staked his horse.,stake,staked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He staked his tent.,stake,staked,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He staked his name.,stake,staked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stalled the truck.,stall,stalled,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stalled the bus.,stall,stalled,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stalled the horse.,stall,stalled,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stayed wet.,stay,stayed,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stayed cold.,stay,stayed,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stayed nearby.,stay,stayed,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He tapped the keg.,tap,tapped,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He tapped the beer.,tap,tapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He tapped the stick.,tap,tapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He used the scotch tape.,tape,tape,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He used the double-sided tape.,tape,tape,9,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He used the interview tape.,tape,tape,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a winter term.,term,term,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a fall term.,term,term,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a legal term.,term,term,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a clock tick.,tick,tick,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an audible tick.,tick,tick,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a parasitic tick.,tick,tick,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a generous tip.,tip,tip,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a stingy tip.,tip,tip,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a pencil tip.,tip,tip,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She liked the essay title.,title,title,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She liked the poem title.,title,title,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She liked the academic title.,title,title,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They toasted the bread.,toast,toasted,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They toasted the strudel.,toast,toasted,8,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They toasted the host.,toast,toasted,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a costly toll.,toll,toll,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a road toll.,toll,toll,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a loud toll.,toll,toll,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the train tracks.,track,tracks,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the trolley tracks.,track,tracks,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the moose tracks.,track,tracks,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was five yards.,yard,yards,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was ten yards.,yard,yards,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They were big yards.,yard,yards,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a comedic act.,act,act,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a pending appeal.,appeal,appeal,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a polluted atmosphere.,atmosphere,atmosphere,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He bailed out the liquid.,bail,bailed,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a country band.,band,band,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He banked the cash.,bank,banked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a religious barrier.,barrier,barrier,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw a baseball bat.,bat,bat,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the balance beam.,beam,beam,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a writer's block.,block,block,8,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He has royal blood.,blood,blood,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was the school board.,board,board,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a leather-bound book.,book,book,9,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He broke the promise.,break,broke,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They ate a lonely breakfast.,breakfast,breakfast,10,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They called the debt.,call,called,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was an island cape.,cape,cape,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a criminal case.,case,case,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She cast a stone.,cast,cast,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a primary cause.,cause,cause,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a jail cell.,cell,cell,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a good-luck charm.,charm,charm,10,2,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He checked the facts.,check,checked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the pet chicken.,chicken,chicken,8,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a stimulating class.,class,class,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He cleared the road.,clear,cleared,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a metal clip.,clip,clip,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The sink clogged.,clog,clogged,7,3,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a common cold.,cold,cold,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a marble column.,column,column,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the polite company.,company,company,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a traffic cone.,cone,cone,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He made a well-written contribution.,contribution,contribution,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was the correct count.,count,count,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a collision course.,course,course,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He crossed a friend.,cross,crossed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a historical date.,date,date,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was about college degrees.,degree,degrees,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the architectural design.,design,design,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the anniversary dinner.,dinner,dinner,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They drained the pond.,drain,drained,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They drew a picture.,draw,drew,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a career dream.,dream,dream,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a battery-powered drill.,drill,drill,9,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a physical examination.,examination,examination,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had an enthusiastic fan.,fan,fan,9,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a steel file.,file,file,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a plastic film.,film,film,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They fixed the price.,fix,fixed,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a concrete foundation.,foundation,foundation,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a business function.,function,function,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was on the parade ground.,ground,ground,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the national guard.,guard,guard,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had a friendly guide.,guide,guide,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They hailed a guest.,hail,hailed,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a nursing home.,home,home,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They had military intelligence.,intelligence,intelligence,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a special issue.,issue,issue,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a paper jam.,jam,jam,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a backspace key.,key,key,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the friendly lamb.,lamb,lamb,8,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She lapped the competitors.,lap,lapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She loaded the van.,load,loaded,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had door locks.,lock,locks,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They liked the women's lunch.,lunch,lunch,10,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the stock market.,market,market,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a tennis match.,match,match,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was veterinary medicine.,medicine,medicine,7,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+There was a clear message.,message,message,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a clay mold.,mold,mold,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the fast mole.,mole,mole,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked the civil-rights movement.,movement,movement,9,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a shredded newspaper.,newspaper,newspaper,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a reddish orange.,orange,orange,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the ripped page.,page,page,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a tree palm.,palm,palm,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a consumer panel.,panel,panel,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a biblical passage.,passage,passage,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She penned her thoughts.,pen,penned,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a secure perch.,perch,perch,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He picked his nose.,pick,picked,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the plastic pitcher.,pitcher,pitcher,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She poached the vegetables.,poach,poached,8,2,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a sweet port.,port,port,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He was in a yoga position.,position,position,8,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a challenging post.,post,post,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He had the quickest punch.,punch,punch,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She had a cloudy pupil.,pupil,pupil,7,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He pushed the desk.,push,pushed,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+That was a tennis racket.,racket,racket,7,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He liked granite rock.,rock,rock,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She ran the company.,run,ran,5,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He saw the bushy sage.,sage,sage,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a major scale.,scale,scale,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a panoramic scene.,scene,scene,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a trained seal.,seal,seal,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She served a warrant.,serve,served,6,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+The cricket sang.,sing,sang,4,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He spilled the secret.,spill,spilled,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He staked his claim.,stake,staked,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stalled the pig.,stall,stalled,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They stayed overnight.,stay,stayed,5,1,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He tapped the drums.,tap,tapped,6,2,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+He used the video tape.,tape,tape,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a technical term.,term,term,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a diseased tick.,tick,tick,8,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a finger tip.,tip,tip,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She liked the professional title.,title,title,7,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They toasted the bride.,toast,toasted,7,2,2,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+It was a bell toll.,toll,toll,6,1,1,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+She saw the snowshoe tracks.,track,tracks,8,1,3,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
+They were cluttered yards.,yard,yards,8,1,4,distilbert/distilbert-base-multilingual-cased,english,Yes,134734080
