@@ -20,15 +20,15 @@ import utils
 
 ### Models to test
 SPANISH_MODELS = [ 
-        "dccuchile/bert-base-spanish-wwm-cased",
-          "dccuchile/albert-tiny-spanish",
-          "dccuchile/albert-base-spanish",
-          "dccuchile/albert-large-spanish",
-          "dccuchile/albert-xlarge-spanish",
-          "dccuchile/albert-xxlarge-spanish",
-          "PlanTL-GOB-ES/roberta-base-bne",
-          "PlanTL-GOB-ES/roberta-large-bne",
-          "dccuchile/bert-base-spanish-wwm-uncased", 
+        # "dccuchile/bert-base-spanish-wwm-cased",
+         #  "dccuchile/albert-tiny-spanish",
+          #"dccuchile/albert-base-spanish",
+          #"dccuchile/albert-large-spanish",
+          #"dccuchile/albert-xlarge-spanish",
+          #"dccuchile/albert-xxlarge-spanish",
+          #"PlanTL-GOB-ES/roberta-base-bne",
+          #"PlanTL-GOB-ES/roberta-large-bne",
+          #"dccuchile/bert-base-spanish-wwm-uncased",
           "dccuchile/distilbert-base-spanish-uncased"]
 
 ENGLISH_MODELS = [
