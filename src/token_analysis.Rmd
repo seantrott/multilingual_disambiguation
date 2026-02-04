@@ -1,0 +1,258 @@
+---
+title: "Analysis of Multilingual Models Tokenization"
+author: "Sean Trott and Pam Rivière"
+date: "November 20, 2024"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "png")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lme4)
+library(viridis)
+library(ggridges)
+library(broom)
+library(lmerTest)
+library(ggrepel)
+
+all_colors <- viridis::viridis(10, option = "magma")
+my_colors <- all_colors[c(1, 4, 7, 9)]  # Selecting specific colors from the palette
+```
+
+# Original models
+
+## Load data
+
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/multilingual_disambiguation/src")
+directory_path <- "../data/processed/tokens/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_original_models <- bind_rows(csv_list) %>%
+  mutate(
+    model_name = sub(".*/", "", mpath)
+  ) %>%
+  mutate(language = str_to_title(language))
+
+table(df_original_models$language)
+table(df_original_models$multilingual)
+table(df_original_models$model_name)
+
+
+```
+
+# Visualize token statistics
+
+Now, we compare the number of tokens (in sentences overall, as well as individual target and disambiguating words) across models.
+
+```{r}
+
+### Total tokens
+summary_df <- df_original_models %>%
+  group_by(language, multilingual) %>%
+  summarise(
+    mean_tokens = mean(num_tokens_total, na.rm = TRUE),
+    sd_tokens = sd(num_tokens_total, na.rm = TRUE),
+    se_tokens = sd(num_tokens_total, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+
+summary_df
+
+# Plot
+ggplot(df_original_models, aes(x = language, y = num_tokens_total, color = multilingual)) +
+  geom_jitter(width = 0.2, alpha = 0.5, size = 1) +  # individual points
+  geom_point(data = summary_df, aes(y = mean_tokens), 
+             size = 3, shape = 21, 
+             fill = "white",
+             position = position_dodge(width = 0.3)) +  # mean points
+  geom_errorbar(data = summary_df, 
+                aes(y = mean_tokens, 
+                    ymin = mean_tokens - se_tokens, 
+                    ymax = mean_tokens + se_tokens),
+                width = 0.2, position = position_dodge(width = 0.3)) +
+  labs(
+    y = "Mean Number of Tokens (Total)",
+    x = "Language",
+    color = "Multilingual",
+    title = ""
+  ) +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)) +
+  theme_minimal() +
+  theme(
+    text = element_text(size = 15),
+    legend.position = "bottom"
+  )
+
+
+
+### num tokens in target
+summary_df <- df_original_models %>%
+  group_by(language, multilingual) %>%
+  summarise(
+    mean_tokens = mean(num_tokens_target, na.rm = TRUE),
+    sd_tokens = sd(num_tokens_target, na.rm = TRUE),
+    se_tokens = sd(num_tokens_target, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+
+summary_df
+
+# Plot
+ggplot(df_original_models, aes(x = language, y = num_tokens_target, color = multilingual)) +
+  geom_jitter(width = 0.2, alpha = 0.5, size = 1) +  # individual points
+  geom_point(data = summary_df, aes(y = mean_tokens), 
+             size = 3, shape = 21, 
+             fill = "white",
+             position = position_dodge(width = 0.3)) +  # mean points
+  geom_errorbar(data = summary_df, 
+                aes(y = mean_tokens, 
+                    ymin = mean_tokens - se_tokens, 
+                    ymax = mean_tokens + se_tokens),
+                width = 0.2, position = position_dodge(width = 0.3)) +
+  labs(
+    y = "Mean Number of Tokens (Target Word)",
+    x = "Language",
+    color = "Multilingual",
+    title = ""
+  ) +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)) +
+  theme_minimal() +
+  theme(
+    text = element_text(size = 15),
+    legend.position = "bottom"
+  )
+
+### num tokens in target
+summary_df <- df_original_models %>%
+  group_by(language, multilingual) %>%
+  summarise(
+    mean_tokens = mean(num_tokens_disambiguating, na.rm = TRUE),
+    sd_tokens = sd(num_tokens_disambiguating, na.rm = TRUE),
+    se_tokens = sd(num_tokens_disambiguating, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+summary_df
+# Plot
+ggplot(df_original_models, aes(x = language, y = num_tokens_disambiguating, color = multilingual)) +
+  geom_jitter(width = 0.2, alpha = 0.5, size = 1) +  # individual points
+  geom_point(data = summary_df, aes(y = mean_tokens), 
+             size = 3, shape = 21, 
+             fill = "white",
+             position = position_dodge(width = 0.3)) +  # mean points
+  geom_errorbar(data = summary_df, 
+                aes(y = mean_tokens, 
+                    ymin = mean_tokens - se_tokens, 
+                    ymax = mean_tokens + se_tokens),
+                width = 0.2, position = position_dodge(width = 0.3)) +
+  labs(
+    y = "Mean Number of Tokens (Disambiguating Word)",
+    x = "Language",
+    color = "Multilingual",
+    title = ""
+  ) +
+  scale_color_manual(values = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)) +
+  theme_minimal() +
+  theme(
+    text = element_text(size = 15),
+    legend.position = "bottom"
+  )
+
+
+
+
+
+
+df_models_tokens = df_original_models %>%
+  group_by(model_name, multilingual, language, n_params) %>%
+  summarise(mean_tokens_target = mean(num_tokens_target),
+            mean_tokens_dw = mean(num_tokens_disambiguating),
+            mean_tokens_total = mean(num_tokens_total)) %>%
+  mutate(log_params = log10(n_params))
+
+
+df_models_tokens %>%
+  ggplot(aes(x = n_params,
+             y = mean_tokens_target,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Number of Tokens (Target Word)",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+df_models_tokens %>%
+  ggplot(aes(x = n_params,
+             y = mean_tokens_dw,
+             color = multilingual,
+             shape = multilingual)) +
+  geom_point(size = 6,
+             alpha = .5) +
+  scale_x_log10() +
+  geom_text_repel(aes(label=model_name), size=3) +
+  labs(x = "Parameters",
+       y = "Number of Tokens (Disambiguating Word)",
+       color = "Multilingual",
+       shape = "Multilingual") +
+  theme_bw() +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme(text = element_text(size = 15),
+        legend.position="bottom") +
+  facet_wrap(~language)
+
+
+
+
+#### Statistical models
+
+mod_full_target = lmer(data = df_original_models,
+                       num_tokens_target ~ multilingual + language + log10(n_params) +
+                         (1|model_name) + (1|sentence) + (1|word))
+
+mod_reduced = lmer(data = df_original_models,
+                       num_tokens_target ~ language + log10(n_params) +
+                         (1|model_name) + (1|sentence) + (1|word))
+
+summary(mod_full_target)
+anova(mod_full_target, mod_reduced)
+
+
+mod_full_dw = lmer(data = df_original_models,
+                       num_tokens_disambiguating ~ multilingual + language + log10(n_params) +
+                         (1|model_name) + (1|sentence) + (1|word))
+
+mod_reduced = lmer(data = df_original_models,
+                       num_tokens_disambiguating ~ language + log10(n_params) +
+                         (1|model_name) + (1|sentence) + (1|word))
+
+summary(mod_full_dw)
+anova(mod_full_target, mod_reduced)
+```
+
+
+

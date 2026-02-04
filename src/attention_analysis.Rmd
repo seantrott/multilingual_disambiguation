@@ -1,0 +1,711 @@
+---
+title: "Analysis of Multilingual Models Attention"
+author: "Sean Trott and Pam Rivière"
+date: "November 20, 2024"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dpi = 300, fig.format = "png")
+```
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(lme4)
+library(viridis)
+library(ggridges)
+library(broom)
+library(lmerTest)
+
+all_colors <- viridis::viridis(10, option = "magma")
+my_colors <- all_colors[c(1, 4, 7, 9)]  # Selecting specific colors from the palette
+```
+
+# Load data
+
+
+```{r}
+# setwd("/Users/seantrott/Dropbox/UCSD/Research/Ambiguity/SSD/multilingual_disambiguation/src")
+directory_path <- "../data/processed/attentions/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_all_models <- bind_rows(csv_list) %>%
+  mutate(Layer = Layer + 1,
+         Head = Head + 1) %>%
+  mutate(
+    model_name = sub(".*/", "", mpath)
+  ) %>%
+  mutate(language = str_to_title(language))
+
+table(df_all_models$mpath)
+table(df_all_models$language)
+table(df_all_models$multilingual)
+table(df_all_models$model_name)
+
+
+
+## Processing
+df_all_models = df_all_models %>%
+  mutate(disambiguating_prev_diff = Attention - prev_token_attention,
+         disambiguating_next_diff = Attention - next_token_attention)
+
+```
+
+
+# Attention
+
+**TOOD**: Ideas
+
+- Rather than just looking at z-score, compare each head's attention to the uniform attention. Select heads with 2x uniform attention?
+
+## Prop. heads attending to disambiguating word
+
+```{r}
+df_attn_by_head = df_all_models %>%
+  group_by(model_name, language, multilingual, Layer, Head, n_params) %>%
+  summarise(mean_attention = mean(Attention),
+            mean_prev_attention = mean(prev_token_attention),
+            mean_next_attention = mean(next_token_attention),
+            mean_diff_prev = mean(disambiguating_prev_diff),
+            mean_diff_next = mean(disambiguating_next_diff)) %>%
+  group_by(model_name, language, n_params) %>%
+  mutate(z_attention = scale(mean_attention),
+         z_prev_attention = scale(mean_prev_attention),
+         z_next_attention = scale(mean_next_attention),
+         z_diff_prev = scale(mean_diff_prev),
+         z_diff_next = scale(mean_diff_next))
+
+df_attn_by_head %>%
+  ggplot(aes(x = z_attention)) +
+  geom_histogram(alpha = .6, bins = 15) +
+  theme_minimal() +
+  geom_vline(xintercept = 3, linetype = "dotted") +
+  labs(x = "Mean Attention (z-scored)") +
+   theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name + language) 
+
+df_attn_by_head %>%
+  ggplot(aes(x = mean_attention)) +
+  geom_histogram(alpha = .6, bins = 15) +
+  theme_minimal() +
+  geom_vline(xintercept = .2, linetype = "dotted") +
+  labs(x = "Mean Attention (raw)") +
+   theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name + language) 
+
+
+
+
+```
+
+## Modeling attention capacity
+
+```{r}
+thresholds <- seq(0.05, 0.5, by = 0.05)
+
+# Compute for each threshold
+sensitivity_df <- map_dfr(thresholds, function(thresh) {
+  df_attn_by_head %>%
+    mutate(disambiguating = mean_attention > thresh) %>%
+    group_by(model_name, multilingual, language, n_params) %>%
+    summarise(
+      threshold = thresh,
+      count_disambiguating = sum(disambiguating),
+      total_heads = n(),
+      prop_disambiguating = mean(disambiguating),
+      .groups = "drop"
+    )
+})
+
+ggplot(sensitivity_df, aes(x = threshold, y = prop_disambiguating,
+                           color = multilingual)) +
+  stat_summary(fun = mean, geom = "line", size = 1) +
+  facet_wrap(~language) +
+  labs(title = "Proportion of Disambiguation-Capable Heads",
+       x = "Attention Threshold",
+       y = "Proportion of Heads > Threshold",
+       color = "Multilingual") +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal()
+
+
+# Grouped AUC calculation using trapezoid rule
+sensitivity_df_sorted <- sensitivity_df %>%
+  arrange(model_name, language, multilingual, threshold)
+
+auc_df <- sensitivity_df_sorted %>%
+  group_by(model_name, language, multilingual, n_params) %>%
+  summarise(
+    auc = sum(diff(threshold) * head(count_disambiguating, -1) +
+              diff(threshold) * tail(count_disambiguating, -1)) / 2,
+    .groups = "drop"
+  )
+
+auc_summary <- auc_df %>%
+  group_by(multilingual, language) %>%
+  summarise(
+    mean_auc = mean(auc),
+    se_auc = sd(auc) / sqrt(n()),
+    .groups = "drop"
+  )
+
+ggplot(auc_summary, aes(x = language, y = mean_auc, fill = multilingual)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  geom_errorbar(aes(ymin = mean_auc - se_auc, ymax = mean_auc + se_auc),
+                position = position_dodge(width = 0.8), width = 0.2) +
+  labs(
+    title = "Average Attention Capacity for Disambiguation",
+    x = "",
+    y = "AUC (Mean ± SE)",
+    fill = "Multilingual"
+  ) +
+  scale_fill_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal()
+
+summary(lm(data = auc_df,
+           auc ~ multilingual + language))
+
+```
+
+
+## More on attention capacity
+
+```{r}
+df_layerwise_attn <- df_attn_by_head %>%
+  group_by(model_name, Layer, language, multilingual, n_params) %>%
+  summarise(
+    avg_attention = mean(mean_attention),
+    max_attention = max(mean_attention),
+    se_attention = sd(mean_attention) / sqrt(n()),
+    .groups = "drop"
+  )
+
+# Summarize multilingual vs. not
+summary_df <- df_layerwise_attn %>%
+  group_by(multilingual, Layer, language) %>%
+  summarise(avg_attention = mean(avg_attention),
+            avg_max_attn = mean(max_attention))
+
+
+
+df_layerwise_attn %>%
+  ggplot(aes(x = Layer, y = avg_attention, color = model_name)) +
+  geom_line(alpha = 0.6, linetype = "dotted") +
+  scale_color_manual(values = viridisLite::viridis(10, option = "mako", 
+                                                   begin = 0.8, end = 0.15)) + 
+  geom_line(data = summary_df,
+            aes(x = Layer, 
+                y = avg_attention, 
+                group = multilingual, 
+                color = multilingual),
+            inherit.aes = FALSE,
+            size = 2) +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme_minimal() +
+  labs(x = "Layer", y = "Mean Attention to Disambiguating Word", color = "Multilingual") +
+  theme(text = element_text(size = 15),
+        legend.title = element_blank()) +
+  facet_wrap(~language)
+
+df_layerwise_attn = df_layerwise_attn %>%
+  group_by(model_name) %>%
+  mutate(max_layer = max(Layer),
+         prop_layer = Layer / max_layer)
+
+
+df_layerwise_attn %>%
+  mutate(binned_prop_layer = ntile(prop_layer, 10)) %>%
+  mutate(prop_binned = binned_prop_layer / 10) %>%
+  ggplot(aes(x = prop_binned,
+             y = avg_attention)) +
+  stat_summary(
+    aes(group = multilingual,
+        color = multilingual),  
+    fun = mean,    
+    geom = "line",        
+    size = 2              
+  ) +
+  stat_summary(
+    aes(group = multilingual, 
+        fill = multilingual), 
+    fun.data = mean_se,    
+    geom = "ribbon",  
+    alpha = 0.2,   
+    color = NA     
+  ) +
+  theme_minimal() +
+  labs(x = "Layer Depth Ratio",
+       y = "Mean Attention to Disambiguating Word",
+  color = "Multilingual",
+  fill = "Multilingual") +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom")  +
+  facet_wrap(~language)
+
+df_layerwise_attn %>%
+  mutate(binned_prop_layer = ntile(prop_layer, 10)) %>%
+  mutate(prop_binned = binned_prop_layer / 10) %>%
+  ggplot(aes(x = prop_binned,
+             y = max_attention)) +
+  stat_summary(
+    aes(group = multilingual,
+        color = multilingual),  
+    fun = mean,    
+    geom = "line",        
+    size = 2              
+  ) +
+  stat_summary(
+    aes(group = multilingual, 
+        fill = multilingual), 
+    fun.data = mean_se,    
+    geom = "ribbon",  
+    alpha = 0.2,   
+    color = NA     
+  ) +
+  theme_minimal() +
+  labs(x = "Layer Depth Ratio",
+       y = "Max Attention to Disambiguating Word",
+  color = "Multilingual",
+  fill = "Multilingual") +
+  scale_color_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom")  +
+  facet_wrap(~language)
+
+
+### Isotropy by layer depth ratio
+df_layerwise_attn = df_layerwise_attn %>% 
+  mutate(prop_layer_scaled = scale(prop_layer))
+
+
+mod_full = lmer(data = df_layerwise_attn,
+                avg_attention ~ prop_layer_scaled + 
+                  multilingual * language +
+                  language + 
+                  log10(n_params) +
+                  (1|model_name),
+                REML = FALSE)
+summary(mod_full)
+
+mod_full = lmer(data = df_layerwise_attn,
+                max_attention ~ prop_layer_scaled + 
+                  multilingual * language +
+                  language + 
+                  log10(n_params) +
+                  (1|model_name),
+                REML = FALSE)
+summary(mod_full)
+
+```
+
+
+## Does attention capacity predict R2?
+
+```{r}
+### Load data and calculate $R^2$
+directory_path <- "../data/processed/distances/"
+csv_files <- list.files(path = directory_path, pattern = "*.csv", full.names = TRUE)
+csv_list <- csv_files %>%
+  map(~ read_csv(.))
+df_distances <- bind_rows(csv_list) %>%
+  mutate(
+    model_name = sub(".*/", "", mpath)
+  ) %>%
+  mutate(language = str_to_title(language))
+
+
+df_original_models_r2 = df_distances %>%
+  group_by(model_name, multilingual, language, n_params, Layer) %>%
+  summarise(r = cor(Distance, mean_relatedness)) %>%
+  mutate(r2 = r ** 2) %>%
+  group_by(model_name, n_params, multilingual, language) %>%
+  summarise(max_r2 = max(r2))  %>%
+  mutate(log_params = log10(n_params))
+
+
+
+### Testing
+THRESHOLD = 0.4
+df_capacity = df_attn_by_head %>%
+  mutate(is_disambiguating = mean_attention > THRESHOLD) %>%
+  group_by(model_name, n_params, language, multilingual) %>%
+  summarise(
+    count_disambiguating = sum(is_disambiguating),
+    max_attn = max(mean_attention),
+    total_heads = n(),
+    prop_disambiguating = mean(is_disambiguating)
+  )
+
+df_capacity %>%
+  ggplot(aes(x = max_attn,
+             fill = multilingual,
+             y = language)) +
+  geom_density_ridges2(aes(height = ..density..), 
+                       color=NA, 
+                       scale=.85, 
+                       # size=1, 
+                       alpha = .8,
+                       stat="density") +
+  theme_minimal() +
+  scale_fill_manual(
+    values = c("Yes" = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[1],
+               "No"  = viridisLite::viridis(2, option = "mako", begin = 0.8, end = 0.15)[2])
+  ) +
+  labs(fill = "Multilingual",
+       x = "Max Attn. to Disambiguating Word",
+       y = "") +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") 
+
+### Join
+df_r2_plus_attention_capacity = df_original_models_r2 %>%
+  inner_join(df_capacity)
+
+
+
+
+#### Establish that max_attn is correlated
+summary(lm(data = df_r2_plus_attention_capacity,
+           max_r2 ~
+             log_params + 
+             language + 
+             max_attn))
+
+
+### Now do mediation analysis
+mod_A <- lm(max_r2 ~ multilingual + 
+                language + log10(n_params),
+              data = df_r2_plus_attention_capacity)
+
+mod_B <- lm(max_attn ~ multilingual, 
+              data = df_r2_plus_attention_capacity)
+
+mod_C <- lm(max_r2 ~ multilingual + max_attn + 
+                  language + 
+                  log10(n_params),
+              data = df_r2_plus_attention_capacity)
+
+coef_A <- coef(mod_A)["multilingualYes"]
+coef_C <- coef(mod_C)["multilingualYes"]
+
+# Proportion of multilingual effect explained by adding mean #tokens
+prop_explained <- (coef_A - coef_C) / coef_A
+prop_explained
+
+```
+
+
+
+## Multilingual models
+
+### Cross-linguistic comparison
+
+```{r attn_across_langues}
+df_attn_by_head = df_all_models %>%
+  filter(multilingual == "Yes") %>%
+  group_by(model_name, language, Layer, Head, n_params) %>%
+  summarise(mean_attention = mean(Attention)) %>%
+  group_by(model_name, language) %>%
+  mutate(z_attention = scale(mean_attention))
+
+df_diff <- df_attn_by_head %>%
+  select(model_name, language, Layer, Head, z_attention) %>%
+  pivot_wider(names_from = language, 
+              values_from = z_attention) %>%
+  mutate(attn_diff = Spanish - English,
+         min_attn = pmin(English, Spanish),
+         mean_attn = (English+Spanish)/2)
+
+df_diff %>%
+  ggplot(aes(x = Layer,
+             y = Head,
+             fill = attn_diff)) +
+  geom_tile() +
+  labs(x = "Layer",
+       y = "Head",
+       fill = "Attention Difference (Spanish - English)") +
+  scale_fill_gradient2(low = "blue",
+                       mid = "white",
+                       high = "red",
+                       midpoint = 0, 
+                       name = "Attention Difference (Spanish - English)") +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+df_diff %>%
+  ggplot(aes(x = Layer,
+             y = Head,
+             fill = min_attn)) +
+  geom_tile() +
+  labs(x = "Layer",
+       y = "Head",
+       fill = "Min. Attn. Across Languages") +
+  scale_fill_gradient2(low = "blue",
+                       mid = "white",
+                       high = "red",
+                       midpoint = 0, 
+                       name = "Min. Attn. Across Languages") +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+df_diff %>%
+  ggplot(aes(x = Layer,
+             y = Head,
+             fill = mean_attn)) +
+  geom_tile() +
+  labs(x = "Layer",
+       y = "Head",
+       fill = "Mean Attn. Across Languages") +
+  scale_fill_gradient2(low = "blue",
+                       mid = "white",
+                       high = "red",
+                       midpoint = 0, 
+                       name = "Mean Attn. Across Languages") +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+
+
+
+# Now fit the regression model for each head
+model_results <- df_all_models %>%
+  filter(multilingual == "Yes") %>%
+  group_by(model_name, Layer, Head) %>%
+  nest() %>%
+  mutate(
+    tidy_model = map(data, ~ lm(
+      Attention ~ prev_token_attention + next_token_attention + language + cue_pos,
+      data = .x
+    ) %>% tidy())
+  ) %>%
+  select(-data) %>%  # drop the full token-level data
+  unnest(tidy_model) 
+
+table(model_results$term)
+
+### Coefficient for Spanish-specific attention,
+### controlling for 1-back and 1-forward attention and cue POS
+model_results %>%
+  filter(term == "languageSpanish") %>%
+  # filter(term != "(Intercept)") %>%
+  ggplot(aes(x = Layer,
+             y = Head,
+             fill = estimate)) +
+  geom_tile() +
+  labs(x = "Layer",
+       y = "Head",
+       fill = "Coefficient (~Spanish)") +
+  scale_fill_gradient2(low = "blue",
+                       mid = "white",
+                       high = "red",
+                       midpoint = 0, 
+                       name = "Coefficient (~Spanish)") +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+
+
+### Do PCA over attentional features for raw data
+### TODO: Add in 
+df_mean_attn = df_all_models %>%
+  filter(multilingual == "Yes") %>%
+  group_by(model_name, language, Layer, Head, n_params) %>%
+  summarise(mean_attention = mean(Attention)) %>%
+  select(model_name, language, Layer, Head, mean_attention) %>%
+  pivot_wider(names_from = language, 
+              values_from = mean_attention) %>%
+  mutate(English_disamb = English,
+         Spanish_disamb = Spanish) %>%
+  select(Layer, Head, model_name,
+         English_disamb, Spanish_disamb)
+
+df_prev_attn = df_all_models %>%
+  filter(multilingual == "Yes") %>%
+  group_by(model_name, language, Layer, Head, n_params) %>%
+  summarise(mean_prev_attention = mean(prev_token_attention)) %>%
+  select(model_name, language, Layer, Head, mean_prev_attention) %>%
+  pivot_wider(names_from = language, 
+              values_from = mean_prev_attention) %>%
+  mutate(English_prev = English,
+         Spanish_prev = Spanish) %>%
+  select(Layer, Head, model_name,
+         English_prev, Spanish_prev)
+
+df_next_attn = df_all_models %>%
+  filter(multilingual == "Yes") %>%
+  group_by(model_name, language, Layer, Head, n_params) %>%
+  summarise(mean_next_attention = mean(next_token_attention)) %>%
+  select(model_name, language, Layer, Head, mean_next_attention) %>%
+  pivot_wider(names_from = language, 
+              values_from = mean_next_attention) %>%
+  mutate(English_next = English,
+         Spanish_next = Spanish)%>%
+  select(Layer, Head, model_name,
+         English_next, Spanish_next)
+
+
+df_attns = df_next_attn %>%
+  inner_join(df_prev_attn) %>%
+  inner_join(df_mean_attn)
+
+pca_features <- df_attns %>%
+  ungroup() %>%
+  select(-Layer, -Head, -model_name) %>%
+  # select(-model_name) %>%
+  scale()  # Standardize
+
+pca_result <- prcomp(pca_features, center = TRUE, scale. = TRUE)
+summary(pca_result)  # Check variance explained
+
+
+#### Scree plot
+explained_var <- pca_result$sdev^2
+explained_var_ratio <- explained_var / sum(explained_var)
+scree_df <- data.frame(
+  PC = paste0("PC", seq_along(explained_var_ratio)),
+  Variance_Explained = explained_var_ratio
+)
+
+ggplot(scree_df, aes(x = PC, y = Variance_Explained)) +
+  geom_col(fill = "steelblue") +
+  geom_line(aes(group = 1), color = "black") +
+  geom_point() +
+  theme_minimal() +
+  labs(title = "Scree Plot",
+       x = "Principal Component",
+       y = "Proportion of Variance Explained") +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  scale_y_continuous(labels = scales::percent_format())
+
+
+### Look at loadings
+loadings_df <- as.data.frame(pca_result$rotation)
+loadings_df$feature <- rownames(loadings_df)
+loadings_df$PC1
+
+loadings_long <- loadings_df %>%
+  pivot_longer(cols = starts_with("PC"),
+               names_to = "PC",
+               values_to = "Loading")
+
+
+ggplot(loadings_long, aes(x = PC, y = feature, fill = Loading)) +
+  geom_tile() +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red",
+                       midpoint = 0) +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        legend.position = "bottom") +
+  labs(title = "PCA Loadings",
+       x = "Principal Component",
+       y = "Original Feature")
+
+
+### Look at distribution
+df_pca_combined <- bind_cols(
+  df_attns,
+  as.data.frame(pca_result$x)
+)
+
+
+df_pca_combined %>%
+  mutate(min_attn = pmin(English_disamb, Spanish_disamb)) %>%
+  ggplot(aes(x = min_attn,
+             y = PC3)) +
+  geom_point(alpha = .5) +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  labs(x = "Minimum Attn. Across Languages",
+       y = "PC3") +
+  facet_wrap(~model_name)
+
+
+df_pca_combined %>%
+  ggplot(aes(x = PC3)) +
+  geom_vline(xintercept = 0, linetype = "dotted") +
+  geom_histogram(bins = 30, alpha = .5) +
+  theme_minimal() +
+  labs(title = "PC3: Bilingual Disambiguation Axis") +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+
+df_pca_combined %>%
+  ggplot(aes(x = Layer,
+             y = Head,
+             fill = PC3)) +
+  geom_tile() +
+  labs(x = "Layer",
+       y = "Head",
+       fill = "PC3: Bilingual Disambiguation Axis") +
+  scale_fill_gradient2(low = "blue",
+                       mid = "white",
+                       high = "red",
+                       midpoint = 0, 
+                       name = "PC3: Bilingual Disambiguation Axis") +
+  theme_minimal() +
+  theme(text = element_text(size = 15),
+        strip.text.y = element_text(angle = 0), # Keep facet labels horizontal
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  facet_wrap(~model_name)
+
+
+```
+
+
+
+
